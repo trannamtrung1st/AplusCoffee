@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="register_form_details" xml:space="preserve">
+    <value>Đăng kí ngay_Họ và Tên_Email_Số điện thoại_Tin nhắn_Xác nhận</value>
+  </data>
+  <data name="section_benefit" xml:space="preserve">
+    <value>&lt;h2&gt;
+                    QUYỀN LỢI &lt;span class="text-success"&gt;ĐỐI TÁC&lt;/span&gt;
+                &lt;/h2&gt;
+                &lt;p&gt;
+                    &lt;span class="text-white font-weight-bold"&gt;1/Hỗ trợ tìm kiếm bằng mặt&lt;/span&gt; : Đối tác được hỗ trợ tìm kiếm mặt bằng nếu chưa có mặt bằng đẹp. 
+&lt;br/&gt;&lt;span class="text-white font-weight-bold"&gt;2/ Nhập nguyên liệu chính hãng giá ưu đãi&lt;/span&gt; : được nhập trực tiếp nguyên liệu chính hãng với giá ưu đãi. 
+&lt;br/&gt;&lt;span class="text-white font-weight-bold"&gt;3/ Chuyển gia toàn bộ máy móc, công nghệ&lt;/span&gt; : Được chuyển giao toàn bộ hệ thống máy móc, trang thiết bị, hệ thống,... 
+&lt;br/&gt;&lt;span class="text-white font-weight-bold"&gt;4/ Tư vấn setup cửa hàng &lt;/span&gt;: Được hỗ trợ tư vấn setup, trang trí cửa hàng theo đúng phong cách A+ Coffee.
+&lt;br/&gt;&lt;span class="text-white font-weight-bold"&gt;5/ Đào tạo nhân sự, quản lý&lt;/span&gt;: Đào tạo các nhân sự từ nhân viên pha chế, thu ngân,... cho tới quản lý cửa hàng,... Ngoài ra đối tác sẽ được đào tạo các quy trình vận hành, cách thức quản lý cửa hàng, nhân sự,...
+&lt;br/&gt;&lt;span class="text-white font-weight-bold"&gt;6/ Cấp đủ giấy phép&lt;/span&gt; : Được hỗ trợ tất các vấn đề liên quan đến Pháp lý, Vệ sinh an toàn thực phẩm,...
+&lt;br/&gt;&lt;span class="text-white font-weight-bold"&gt;7/ Hỗ trợ Marketing &lt;/span&gt;: Được hưởng các chương trình Marketing chung của thương hiệu, được tư vấn về PR, Marketing, kế hoạch phát triển riêng của cửa hàng.
+
+                &lt;/p&gt;</value>
+  </data>
+  <data name="section_franchise_procedure" xml:space="preserve">
+    <value>&lt;h2&gt;7 Bước quy trình làm chủ quán cafe &lt;span class="color-gold"&gt;A+ Coffee&lt;/span&gt; Nhượng Quyền.&lt;/h2&gt;
+&lt;p&gt;
+&lt;span class="text-info"&gt;Bước 1 (Liên Hệ)&lt;/span&gt; : Đối tác liên hệ với A+ Coffee (qua điện thoại, internet,...)
+&lt;br/&gt;&lt;span class="text-info"&gt; Bước 2 (Cung cấp thông tin)&lt;/span&gt; : A+ Coffee cung cấp thông tin nhượng quyền cho đối tác mong muốn khởi nghiệp. 
+&lt;br/&gt;&lt;span class="text-info"&gt; Bước 3 (Gặp gỡ tư vấn)&lt;/span&gt; : Gặp trực tiếp giữa 2 bên, đối tác tới trụ sở A+ Coffee, nghe tư vấn cụ thể và được giải đáp các thắc mắc.
+&lt;br/&gt;&lt;span class="text-info"&gt; Bước 4 (Khảo sát)&lt;/span&gt; : A+ Coffee khảo sát địa điểm, kiểm tra chất lượng đối tác xem có đủ điều kiện để hợp tác hay không.
+&lt;br/&gt;&lt;span class="text-info"&gt; Bước 5 ( Ký hợp đồng )&lt;/span&gt; : Ký hợp đồng nhượng quyền, đối tác thanh toán phí nhượng quyền. 
+&lt;br/&gt;&lt;span class="text-info"&gt; Bước 6 ( Setup nhượng quyền) &lt;/span&gt;: A+ Coffee tiến hành thi công thiết kế cửa hàng, nhập nguyên liệu, máy móc, đào tạo nhân sự,...
+&lt;br/&gt;&lt;span class="text-info"&gt; Bước 7 (Vận hành hoạt động)&lt;/span&gt; : Sau 2 - 4 tuần cửa hàng đi vào hoạt động.
+&lt;/p&gt;</value>
+  </data>
+  <data name="section_intro" xml:space="preserve">
+    <value>&lt;div class="heading-section ftco-animate "&gt;
+                &lt;span class="subheading"&gt;Franchise&lt;/span&gt;
+                &lt;h2 class="mb-4"&gt;
+                    Tại sao chọn A+ Coffee nhượng quyền?
+                &lt;/h2&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;p&gt; &lt;span class="text-white font-weight-bold"&gt;1/ Chi phí thấp&lt;/span&gt; : Chi phí đầu tư và nhượng quyền thấp, thấp hơn 40-50% so với thị trường. 
+&lt;br/&gt;&lt;span class="text-white font-weight-bold"&gt;2/ Hoàn vốn nhanh và ổn định&lt;/span&gt; : Thời gian hoàn vốn nhanh, đã được chứng minh trên hơn 30 cơ sở và có Báo cáo tài chính.
+&lt;br/&gt;&lt;span class="text-white font-weight-bold"&gt;3/ Sản phẩm cao cấp &amp; đa dạng&lt;/span&gt; : Các nguyên liệu luôn được chọn lọc kỹ càng. Ngoài ra bộ phận công ty luôn nghiên cứu và phát triển ra những sản phẩm mới, bắt kịp xu hướng thời đại.
+&lt;br/&gt;&lt;span class="text-white font-weight-bold"&gt;4/ Concept riêng biệt&lt;/span&gt; : Không gian trong các cửa hàng A+ Coffee luôn tạo ra nét riêng biệt, lấy cảm hứng từ sự phá cách độc đáo trong nét cổ truyền của Việt Nam.
+&lt;br/&gt;&lt;span class="text-white font-weight-bold"&gt;5/ Khả năng cạnh tranh cao&lt;/span&gt; : Mô hình đầu tư chuyên nghiệp, ngoài chuỗi Coffee, A+ Coffee còn sở hữu nhà máy sản xuất, trường đào tạo pha chế,...
+&lt;br/&gt;&lt;span class="text-white font-weight-bold"&gt;6/ Thương hiệu mạnh &amp; bền vững&lt;/span&gt; : trải qua 8 năm xây dựng và phát triển thành công thương hiệu A+ Coffee.
+&lt;br/&gt;&lt;span class="text-white font-weight-bold"&gt;7/ Hỗ trợ và đồng hành&lt;/span&gt; : A+ Coffee cam kết luôn đồng hành cùng đối tác trong mọi hoạt động: Setup cửa hàng, đào tạo, khai trương, vận hành, triển khai các chiến lược Marketing,...
+                &lt;/p&gt;
+
+                &lt;p class="mt-3"&gt;
+                    &lt;a href="/lien-he" class="btn btn-primary p-1 px-xl-2 py-xl-2"&gt;TƯ VẤN 24/7&lt;/a&gt;
+                    &lt;a href="#" class="btn btn-white btn-outline-white p-1 px-xl-2 py-xl-2"&gt;CHÍNH SÁCH&lt;/a&gt;
+                &lt;/p&gt;
+            &lt;/div&gt;</value>
+  </data>
+  <data name="slider_content" xml:space="preserve">
+    <value>&lt;h1 class="mb-3 mt-5 bread"&gt;NHƯỢNG QUYỀN&lt;/h1&gt;
+                    &lt;p class="breadcrumbs"&gt;
+                        &lt;span class="mr-2"&gt;&lt;a class="color-gold" href="/"&gt;TRANG CHỦ&lt;/a&gt;&lt;/span&gt;
+                        &lt;span&gt;NHƯỢNG QUYỀN&lt;/span&gt;
+                    &lt;/p&gt;
+                    &lt;p class="lead mb-0 mt-5"&gt;
+                        Kinh doanh nhượng quyền (thường được gọi là franchise) là một hệ thống
+                        mở rộng mạng lưới cung cấp sản phẩm, dịch vụ (đối với đơn vị nhượng quyền).
+                        Là cơ hội để phát triển doanh
+                        nghiệp dưới một thương hiệu nổi tiếng (đối với đơn vị được nhượng quyền).
+                    &lt;/p&gt;
+                    &lt;p class="mt-3"&gt;
+                        &lt;a href="/lien-he" class="btn btn-primary p-3 px-xl-4 py-xl-3"&gt;LIÊN HỆ - TƯ VẤN 24/7&lt;/a&gt;
+                    &lt;/p&gt;</value>
+  </data>
+</root>

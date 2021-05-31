@@ -1,0 +1,129 @@
+﻿@page "/nhuong-quyen"
+@model FranCoffee.Website.Pages.FranchiseModel
+@{
+}
+
+@section custom_head {
+    <style>
+
+        .ftco-appointment {
+            background: rgba(0,0,0,0.5) !important;
+        }
+
+            .ftco-appointment p {
+                text-align: justify
+            }
+
+        .appointment-form .form-group .btn {
+            display: inline-block !important;
+        }
+
+        @@media (min-width: 768px) {
+            .ftco-about .one-half {
+                padding: 6%;
+                width: 50%;
+            }
+        }
+    </style>
+}
+<section class="common-slider owl-carousel">
+
+    <div class="slider-item" style="background-image: url(/images/bg_1.jpg?v=31032020);" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row slider-text justify-content-center align-items-center">
+
+                <div class="col-12 slider-content pb-5 justify-content-center align-items-center d-flex">
+                    <div class="col-md-9 col-sm-12 text-center ftco-animate">
+                        @Model.L["slider_content"]
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="ftco-about d-md-flex">
+    <div class="one-half">
+        <img src="~/images/whyaplus.jpg?v=31032020" class="img img-fluid w-100" />
+        @*<video class="w-100" controls="controls">
+                <source src="/videos/coffee.mp4" type="video/mp4">
+            </video>*@
+    </div>
+    <div class="one-half ftco-animate">
+        <div class="overlap">
+            @Model.L["section_intro"]
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section pt-0 pb-2">
+    <div class="overlay"></div>
+    <div class="container-wrap">
+        <div class="row no-gutters d-md-flex align-items-center">
+            <!--<div class="col-md-6 d-flex align-self-stretch">-->
+            <div class="col-md-7 px-md-5 px-3 pb-5 mb-5">
+                <!--<div id="map"></div>-->
+                @Model.L["section_benefit"]
+            </div>
+            <div class="col-md-5 pb-5 mb-5">
+                <img src="~/images/partner-benefit.jpg?v=31032020" class="img img-fluid w-100" />
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="ftco-appointment">
+    <div class="overlay"></div>
+    <div class="container-wrap">
+        <div class="row no-gutters d-md-flex align-items-center">
+            <!--<div class="col-md-6 d-flex align-self-stretch">-->
+            <div class="col-md-6 p-md-5 p-3 mb-5 mt-5">
+                <!--<div id="map"></div>-->
+                @Model.L["section_franchise_procedure"]
+            </div>
+
+            @{
+                var formDetails = Model.L["register_form_details"].Value.Split('_');
+            }
+            <div class="col-md-6 appointment ftco-animate">
+                <!--Register header-->
+                <h3 class="mb-3">@formDetails[0]</h3>
+                <form asp-page="mail" asp-page-handler="register" class="appointment-form" method="post">
+                    <div class="d-md-flex">
+                        <div class="form-group">
+                            <!--Full name-->
+                            <input type="text" name="full_name" class="form-control" placeholder="@formDetails[1]">
+                        </div>
+                    </div>
+                    <div class="d-md-flex">
+                        <div class="form-group">
+                            <!--Email-->
+                            <input type="text" name="email" class="form-control" placeholder="@formDetails[2]">
+                        </div>
+                        <div class="form-group ml-md-4">
+                            <!--Phone-->
+                            <input type="text" name="phone" class="form-control" placeholder="@formDetails[3]">
+                        </div>
+                    </div>
+                    <div class="d-md-flex">
+                        <div class="form-group">
+                            <!--Message-->
+                            <textarea name="message"
+                                      id="" cols="30" rows="2" class="form-control" placeholder="@formDetails[4]"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="text-center">
+                            <input type="submit" value="@formDetails[5]" class="btn btn-primary py-3 px-4">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>

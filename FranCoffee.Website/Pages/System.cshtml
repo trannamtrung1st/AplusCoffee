@@ -1,0 +1,223 @@
+﻿@page "/he-thong-aplus-coffee"
+@model FranCoffee.Website.Pages.SystemModel
+@{
+}
+
+@section custom_head {
+    <style>
+
+        .ftco-blog-post {
+            padding: 4rem 0 4rem 0 !important;
+        }
+
+        .ftco-counter .icon {
+            background-color: rgba(255,255,255,0.75);
+        }
+
+        .contact-form .form-control {
+            background: white !important;
+            color: black !important;
+            padding: 19px 10px;
+            border-radius: 7px;
+            height: unset !important;
+        }
+    </style>
+}
+
+<section class="common-slider owl-carousel">
+
+    <div class="slider-item" style="background-image: url(/images/bg_1.jpg?v=31032020);" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row slider-text justify-content-center align-items-center">
+
+                <div class="slider-content pb-5 col-md-7 col-sm-12 text-center ftco-animate">
+                    @Model.L["slider_content"]
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="ftco-section ftco-blog-post">
+    <div class="container">
+        <div class="row justify-content-center mt-3 mb-5 pb-3">
+            <div class="col-md-12 heading-section ftco-animate text-center">
+                @Model.L["branches_system_header"]
+                <form class="contact-form" method="get">
+                    <div class="form-group">
+                        @*<input type="text" class="d-inline-block form-control w-50 mr-3"
+                            placeholder="TÌM KIẾM CỬA HÀNG TRONG HỆ THỐNG A+ COFFEE">*@
+                        <select class="form-control d-inline-block w-50 mr-3" name="area">
+                            <option value="">@Model.L["all_area_option"]</option>
+
+                            @foreach (var a in Model.AvailableAreas)
+                            {
+                                if (Model.Area != null && Model.Area.Equals(a))
+                                {
+                                    <option value="@a" selected>@a</option>
+                                }
+                                else
+                                {
+                                    <option value="@a">@a</option>
+                                }
+                            }
+
+                        </select>
+                        <input type="submit" value="@Model.L["search_btn_text"]" class="d-inline-block btn btn-primary py-3 px-4">
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+        <div class="row d-flex">
+            @foreach (var b in Model.Branches)
+            {
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="blog-entry align-self-stretch">
+                        <a href="/thong-tin-cua-hang/@b.Id" class="block-20">
+                            @{
+                                if (b.ImageUrl != null)
+                                {
+                                    <img src="@b.ImageUrl" class="img img-fluid w-100 h-100" />
+                                }
+                            }
+                        </a>
+                        <div class="text py-4 d-block">
+                            <div class="meta">
+                                <div>
+                                    <a href="#">
+                                        <span class="icon-map-marker"></span>&nbsp;
+                                        @b.Address
+                                    </a>
+                                </div>
+                            </div>
+                            <h3 class="heading mt-2">
+                                <a href="/thong-tin-cua-hang/@b.Id">
+                                    @b.Name
+                                </a>
+                            </h3>
+                            <p>@b.Description</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+</section>
+
+<section class="ftco-counter ftco-bg-dark img" id="section-counter" style="background-image: url(/images/gallery-1.jpg?v=31032020);" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                @{
+                    var counterDetails = Model.L["section_counter_details"].Value.Split('_');
+                }
+
+                <div class="row">
+                    <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
+                        <div class="block-18 text-center">
+                            <div class="text">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <img src="~/images/branch.png?v=31032020" class="img img-fluid w-75" />
+                                </div>
+                                <strong class="number" data-number="@Model.BranchCount">0</strong>
+                                <!--Chi nhánh-->
+                                <span>@counterDetails[0]</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
+                        <div class="block-18 text-center">
+                            <div class="text">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <img src="~/images/member.png?v=31032020" class="img img-fluid w-75" />
+                                </div>
+                                <strong class="number" data-number="3979">0</strong>
+                                <!--Khách hàng thân thiết-->
+                                <span>@counterDetails[2]</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
+                        <div class="block-18 text-center">
+                            <div class="text">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <img src="~/images/employee.png?v=31032020" class="img img-fluid w-75" />
+                                </div>
+                                <strong class="number" data-number="100">0</strong>
+                                <span>@counterDetails[3]</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section ftco-blog-post">
+    <div class="container">
+        <div class="row justify-content-center mt-3 mb-5 pb-3">
+            <div class="col-md-7 heading-section ftco-animate text-center">
+                @Model.L["section_blog_heading"]
+            </div>
+        </div>
+        <div class="row d-flex">
+
+            @foreach (var p in Model.RecentPosts)
+            {
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="blog-entry align-self-stretch">
+                        <a href="/chi-tiet-bai-viet/@p.Id"
+                           class="block-20">
+                            <img class="img img-fluid w-100 h-100" @(p.ThumbnailUrl != null ? Html.Raw($"src=\"{p.ThumbnailUrl}\"") : Html.Raw("")) />
+                        </a>
+                        <div class="text py-4 d-block">
+                            <div class="meta">
+                                <div><a href="#"><span class="icon-calendar"></span>&nbsp; @p.Date?.ToVNDateTime().ToString("dd/MM/yyyy")</a></div>
+                                <div><a href="#"><span class="icon-person"></span> @p.Author</a></div>
+                            </div>
+                            <div class="tag-widget post-tag-container">
+                                <div class="tagcloud">
+                                    @{
+                                        if (p.Tags != null)
+                                        {
+                                            foreach (var t in p.Tags)
+                                            {
+                                                <a href="#" class="tag-cloud-link">@t</a>
+                                            }
+                                        }
+                                    }
+                                </div>
+                            </div>
+                            <h3 class="heading mt-2"><a href="/chi-tiet-bai-viet/@p.Id">@p.Title</a></h3>
+                            <p>@p.PostDescription</p>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <p class="text-center w-100">
+                <a href="/bai-viet?branch_id=0" class="btn btn-primary btn-outline-primary p-3 px-xl-4 py-xl-3">@Model.L["blog_btn"]</a>
+            </p>
+        </div>
+
+    </div>
+</section>
+
+@section custom_script {
+    <script>
+        pageInit();
+        function pageInit() {
+            setTimeout(() => {
+                $('#stores-system-scroll')[0].scrollIntoView();
+            }, 100);
+        }
+    </script>
+}

@@ -1,0 +1,111 @@
+﻿@page "/thong-tin-cua-hang/{id}"
+@model FranCoffee.Website.Pages.BranchDetailModel
+@{
+}
+
+@section custom_head{
+    <style>
+
+        .ftco-blog-post {
+            padding: 0 0 4rem 0 !important;
+        }
+    </style>
+}
+
+<section class="ftco-section pb-0">
+    <div class="container">
+        <div class="row justify-content-center mt-3 mb-5 pb-3">
+            <div class="col-md-7 heading-section ftco-animate text-center">
+                @Model.L["section_store_heading"]
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section pb-1 pt-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mb-5 ftco-animate">
+                @if (Model.Branch.ImageUrl != null)
+                {
+                    <a href="@Model.Branch.ImageUrl" class="image-popup">
+                        <img src="@Model.Branch.ImageUrl" class="img-fluid" alt="Colorlib Template">
+                    </a>
+                }
+            </div>
+            <div class="col-lg-6 product-details pl-md-5 ftco-animate">
+                <h3>@Model.Branch.Name</h3>
+                <p class="price"><span>@Model.Branch.Area</span></p>
+                <p>
+                    <span class="font-weight-bold">@Model.L["address_lbl"]</span>: @Model.Branch.Address
+                    <br />
+                    <span class="font-weight-bold">@Model.L["opening_date_lbl"]</span>: 
+                    @Model.Branch.OpeningDate?.ToVNDateTime().ToString("dd/MM/yyyy")
+                </p>
+                <p>
+                    @Model.Branch.Description
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section pt-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 ftco-animate text-white">
+                @Html.Raw(Model.Branch.IntroContent)
+            </div> <!-- .col-md-8 -->
+        </div>
+    </div>
+</section> <!-- .section -->
+
+
+<section class="ftco-section ftco-blog-post">
+    <div class="container">
+        <div class="row justify-content-center mt-3 mb-5 pb-3">
+            <div class="col-md-7 heading-section ftco-animate text-center">
+                @Model.L["section_blog_heading"]
+            </div>
+        </div>
+        <div class="row d-flex">
+
+            @foreach (var p in Model.RecentPosts)
+            {
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="blog-entry align-self-stretch">
+                        <a href="/chi-tiet-bai-viet/@p.Id"
+                           class="block-20">
+                            <img class="img img-fluid w-100 h-100" @(p.ThumbnailUrl != null ? Html.Raw($"src=\"{p.ThumbnailUrl}\"") : Html.Raw("")) />
+                        </a>
+                        <div class="text py-4 d-block">
+                            <div class="meta">
+                                <div><a href="#"><span class="icon-calendar"></span>&nbsp; @p.Date?.ToVNDateTime().ToString("dd/MM/yyyy")</a></div>
+                                <div><a href="#"><span class="icon-person"></span> @p.Author</a></div>
+                            </div>
+                            <div class="tag-widget post-tag-container">
+                                <div class="tagcloud">
+                                    @if (p.Tags != null)
+                                    {
+                                        @foreach (var t in p.Tags)
+                                        {
+                                            <a href="#" class="tag-cloud-link">@t</a>
+                                        }
+                                    }
+                                </div>
+                            </div>
+                            <h3 class="heading mt-2"><a href="/chi-tiet-bai-viet/@p.Id">@p.Title</a></h3>
+                            <p>@p.PostDescription</p>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <p class="text-center w-100">
+                <a href="/bai-viet?branch_id=@Model.Branch.Id" class="btn btn-primary btn-outline-primary p-3 px-xl-4 py-xl-3">@Model.L["blog_btn"]</a>
+            </p>
+        </div>
+
+    </div>
+</section>
+

@@ -1,0 +1,6 @@
+﻿<!--Sua loi Shared Resources khong nhan duoc-->
+<Project>
+  <PropertyGroup>
+    <EmbeddedResourceUseDependentUponConvention>false</EmbeddedResourceUseDependentUponConvention>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,146 @@
+﻿@page "/chi-tiet-bai-viet/{id}"
+@model FranCoffee.Website.Pages.BlogDetailModel
+@{
+}
+
+@section fb_meta{
+    @{
+        var fullUrl = Request.Scheme + "://" + Request.Host + Request.Path;
+        var fullImg = Request.Scheme + "://" + Request.Host + Model.Post.ThumbnailUrl.Replace('\\', '/');
+    }
+    <meta property="fb:app_id" content="192149448860613" />
+    <meta property="og:url" content="@fullUrl" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="@Model.Post.Title" />
+    <meta property="og:description" content="@Model.Post.PostDescription" />
+    <meta property="og:image" content="@fullImg" />
+}
+
+@section custom_head {
+
+}
+
+<section class="common-slider owl-carousel">
+
+    <div class="slider-item" style="background-image: url(/images/bg_1.jpg?v=31032020);" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row slider-text justify-content-center align-items-center">
+                <div class="col-12 slider-content pb-5 justify-content-center align-items-center d-flex">
+                    <div class="col-md-10 col-sm-12 text-center ftco-animate">
+                        <h1 class="mb-3 mt-5 bread">@Model.Post.Title</h1>
+                        <p class="breadcrumbs">
+                            @Model.L["breadcrumbs"]
+                            <span>@Model.Post.Title</span>
+                        </p>
+                        <p class="lead mb-0 mt-5">
+                            @Model.Post.PostDescription
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 ftco-animate text-white">
+                <h2 class="mb-3 color-gold">@Model.Post.Title</h2>
+                <p class="text-white-50">@Model.Post.PostDescription</p>
+                <hr />
+
+                @Html.Raw(Model.Post.PostContent)
+
+                <div class="tag-widget post-tag-container mb-5 mt-5">
+                    <div class="tagcloud">
+                        @if (Model.Post.Tags != null)
+                        {
+                            @foreach (var t in Model.Post.Tags)
+                            {
+                                <a href="#" class="tag-cloud-link">@t</a>
+                            }
+                        }
+                    </div>
+                </div>
+
+                <div class="text-right mb-3">
+                    <div class="fb-share-button" data-href="#" data-layout="button_count" data-size="small">
+                        <a target="_blank" href="#" class="fb-xfbml-parse-ignore">
+                            Share Facebook
+                        </a>
+                    </div>
+                </div>
+                <h6 class="text-right text-white-50">@Model.Post.Date?.ToVNDateTime().ToString("dd/MM/yyyy")</h6>
+                <h3 class="text-right">
+                    @Model.Post.Author
+                </h3>
+
+            </div> <!-- .col-md-8 -->
+            <div class="col-md-4 sidebar ftco-animate">
+                <div class="sidebar-box">
+                    <form action="#" class="search-form">
+                        <div class="form-group">
+                            <div class="icon">
+                                <span class="icon-search"></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="@Model.L["search_placeholder"] ...">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="sidebar-box ftco-animate">
+                    <h3>Tags</h3>
+                    <div class="tagcloud">
+                        @if (Model.Post.Tags != null)
+                        {
+                            @foreach (var t in Model.Post.Tags)
+                            {
+                                <a href="#" class="tag-cloud-link">@t</a>
+                            }
+                        }
+                    </div>
+                </div>
+
+                <div class="sidebar-box ftco-animate">
+                    <h3>Gần đây</h3>
+
+                    @foreach (var p in Model.RecentPosts)
+                    {
+                        <div class="block-21 mb-4 d-flex">
+                            <a class="blog-img mr-4" href="/chi-tiet-bai-viet/@p.Id">
+                                <img class="img img-fluid w-100 h-100" @(p.ThumbnailUrl != null ? Html.Raw($"src=\"{p.ThumbnailUrl}\"") : Html.Raw("")) />
+                            </a>
+                            <div class="text">
+                                <h3 class="heading"><a href="/chi-tiet-bai-viet/@p.Id">@p.Title</a></h3>
+                                <div class="meta">
+                                    <div><a href="#"><span class="icon-calendar"></span>&nbsp; @p.Date?.ToVNDateTime().ToString("dd/MM/yyyy")</a></div>
+                                    <div><a href="#"><span class="icon-person"></span> @p.Author</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</section> <!-- .section -->
+
+@section custom_script{
+    <script>
+        pageInit();
+        function pageInit() {
+            var href = location.href;
+            $('.fb-share-button').attr('data-href', href);
+            $('.fb-share-button a').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(href) + '&amp;src=sdkpreparse');
+        }
+    </script>
+}

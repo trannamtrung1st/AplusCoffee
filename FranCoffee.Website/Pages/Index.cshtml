@@ -1,0 +1,463 @@
+﻿@page
+@model IndexModel
+@{
+}
+
+@section custom_head{
+
+    <style>
+        @@media (min-width: 1200px) {
+            .ftco-intro .info {
+                margin-top: 130px;
+            }
+
+            .slider-core-vl {
+                padding-left: 50px;
+                padding-top: 80px;
+            }
+        }
+        .slider-core-vl {
+            height: 400px !important;
+            margin-bottom: 70px;
+        }
+
+        .owl-carousel.slider-core-vl .owl-dots{
+            bottom: -55px!important;
+        }
+
+        .slider-core-vl .slider-item {
+            height: 400px !important;
+        }
+
+        .testimony .author .image img {
+            width: 80px !important;
+            height: 80px !important;
+            border-radius: 190% !important;
+            max-width: unset !important;
+        }
+
+        .testimony .author .image {
+            margin-right: 50px !important;
+        }
+
+        .ftco-intro .info {
+            background-color: rgba(0,0,0,0.3) !important;
+            width: 100% !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+
+            .ftco-intro .info .text {
+                width: 100% !important;
+            }
+
+                .ftco-intro .info .text h3 {
+                    padding: 12px;
+                    border-radius: 7px;
+                    color: black;
+                }
+
+        .ftco-services {
+            background-image: radial-gradient(#fff, #fcf0de, #c49b63)
+        }
+
+        .services .icon {
+            border-radius: 7px;
+        }
+
+        .ftco-appointment {
+            background: rgba(0,0,0,0.5) !important;
+        }
+
+            .ftco-appointment p {
+                text-align: justify
+            }
+
+        .appointment-form .form-group .btn {
+            display: inline-block !important;
+        }
+
+        .ftco-blog-post {
+            padding: 7rem 0 4rem 0 !important;
+        }
+    </style>
+
+}
+
+<section class="common-slider owl-carousel">
+    <div class="slider-item" style="background-image: url(images/bg_1.jpg?v=31032020);">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row slider-text align-items-center" data-scrollax-parent="true">
+
+                <div class="col-12 slider-content p-3 justify-content-center align-items-center d-flex">
+                    <div class="col-md-8 col-sm-12 text-center ftco-animate">
+                        @Model.L["slide1_content"]
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider-item" style="background-image: url(images/bg_2.jpg?v=31032020);">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+                <div class="col-12 slider-content p-3 justify-content-center align-items-center d-flex">
+                    <div class="col-md-8 col-sm-12 text-center ftco-animate">
+                        @Model.L["slide2_content"]
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider-item" style="background-image: url(images/bg_3.jpg?v=31032020);">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+                <div class="col-12 slider-content p-3 justify-content-center align-items-center d-flex">
+                    <div class="col-md-9 col-sm-12 text-center ftco-animate">
+                        @Model.L["slide3_content"]
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-intro">
+    <div class="container-wrap">
+        <div class="wrap d-md-flex align-items-xl-end">
+            <div class="info">
+                <div class="row no-gutters">
+                    <div class="col-md-12 d-flex ftco-animate text-center">
+                        <div class="text">
+                            <h3 class="bg-white d-inline-block">
+                                <span class="icon icon-phone color-gold"></span> 0932034539
+                            </h3>
+                            <p class="text-white">@Model.L["contact_request_for_support"]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-about d-md-flex">
+    <div class="slider-core-vl common-slider col-lg-6 owl-carousel">
+        <div class="slider-item" style="background-image: url(images/giatricotloi1.jpg?v=31032020);">
+        </div>
+        <div class="slider-item" style="background-image: url(images/giatricotloi2.jpg?v=31032020);">
+        </div>
+        <div class="slider-item" style="background-image: url(images/giatricotloi3.jpg?v=31032020);">
+        </div>
+    </div>
+    <div class="one-half ftco-animate">
+        <div class="overlap">
+            @Model.L["section_core_value"]
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section ftco-services">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4 ftco-animate">
+                <div class="media d-block text-center block-6 services">
+                    <div class="icon d-flex justify-content-center align-items-center mb-5">
+                        <img src="~/images/customer.png?v=31032020" class="img img-fluid" />
+                    </div>
+                    <div class="media-body">
+                        @Model.L["service1"]
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 ftco-animate">
+                <div class="media d-block text-center block-6 services">
+                    <div class="icon d-flex justify-content-center align-items-center mb-5">
+                        <img src="~/images/inno.png?v=31032020" class="img img-fluid" />
+                    </div>
+                    <div class="media-body">
+                        @Model.L["service2"]
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section ftco-blog-post">
+    <div class="container">
+        <div class="row justify-content-center mt-3 mb-5 pb-3">
+            <div class="col-md-7 heading-section ftco-animate text-center">
+                @Model.L["section_branches"]
+            </div>
+        </div>
+        <div class="row d-flex">
+
+            @foreach (var b in Model.NewestBranches)
+            {
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="blog-entry align-self-stretch">
+                        <a href="/thong-tin-cua-hang/@b.Id" class="block-20">
+                            @{
+                                if (b.ImageUrl != null)
+                                {
+                                    <img src="@b.ImageUrl" class="img img-fluid w-100 h-100" />
+                                }
+                            }
+                        </a>
+                        <div class="text py-4 d-block">
+                            <div class="meta">
+                                <div>
+                                    <a href="#">
+                                        <span class="icon-map-marker"></span>&nbsp;
+                                        @b.Address
+                                    </a>
+                                </div>
+                            </div>
+                            <h3 class="heading mt-2">
+                                <a href="/thong-tin-cua-hang/@b.Id">
+                                    @b.Name
+                                </a>
+                            </h3>
+                            <p>@b.Description</p>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <p class="text-center w-100">
+                <a href="/he-thong-aplus-coffee" class="btn btn-primary btn-outline-primary p-3 px-xl-4 py-xl-3">@Model.L["branch_btn"]</a>
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section class="ftco-gallery">
+    <div class="container-wrap">
+        <div class="row no-gutters">
+            <div class="col-md-3 ftco-animate">
+                <a href="~/images/gallery-1.jpg?v=31032020" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-1.jpg?v=31032020);">
+                    <div class="icon mb-4 d-flex align-items-center justify-content-center">
+                        <span class="icon-search"></span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 ftco-animate">
+                <a href="~/images/gallery-2.jpg?v=31032020" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-2.jpg?v=31032020);">
+                    <div class="icon mb-4 d-flex align-items-center justify-content-center">
+                        <span class="icon-search"></span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 ftco-animate">
+                <a href="~/images/gallery-3.jpg?v=31032020" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-3.jpg?v=31032020);">
+                    <div class="icon mb-4 d-flex align-items-center justify-content-center">
+                        <span class="icon-search"></span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 ftco-animate">
+                <a href="~/images/gallery-4.jpg?v=31032020" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-4.jpg?v=31032020);">
+                    <div class="icon mb-4 d-flex align-items-center justify-content-center">
+                        <span class="icon-search"></span>
+                    </div>
+                </a>
+            </div>
+            <a href="~/images/gallery-5.jpg?v=31032020" class="gallery img d-none"></a>
+            <a href="~/images/gallery-6.jpg?v=31032020" class="gallery img d-none"></a>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section img" id="ftco-testimony" style="background-image: url(/images/bg_1.jpg?v=31032020);" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-8 heading-section text-center ftco-animate">
+                @Model.L["section_customer"]
+            </div>
+        </div>
+    </div>
+    <div class="container-wrap">
+        <div class="row d-flex no-gutters">
+            <div class="col-lg align-self-sm-end ftco-animate">
+                <div class="testimony">
+                    @Model.L["testimony1"]
+                </div>
+            </div>
+            <div class="col-lg align-self-sm-end">
+                <div class="testimony overlay">
+                    @Model.L["testimony2"]
+
+                </div>
+            </div>
+            <div class="col-lg align-self-sm-end ftco-animate">
+                <div class="testimony">
+                    @Model.L["testimony3"]
+
+                </div>
+            </div>
+            <div class="col-lg align-self-sm-end">
+                <div class="testimony overlay">
+                    @Model.L["testimony4"]
+
+                </div>
+            </div>
+            <div class="col-lg align-self-sm-end ftco-animate">
+                <div class="testimony">
+                    @Model.L["testimony5"]
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="ftco-appointment">
+    <div class="overlay"></div>
+    <div class="container-wrap">
+        <div class="row no-gutters d-md-flex align-items-center">
+            <!--<div class="col-md-6 d-flex align-self-stretch">-->
+            <div class="col-md-6 p-md-5 p-3 mb-5 mt-5">
+                <!--<div id="map"></div>-->
+                @Model.L["section_franchise_procedure"]
+            </div>
+
+            @{
+                var formDetails = Model.L["register_form_details"].Value.Split('_');
+
+            }
+            <div class="col-md-6 appointment ftco-animate">
+                <!--Register header-->
+                <h3 class="mb-3">@formDetails[0]</h3>
+                <form asp-page="mail" asp-page-handler="register" class="appointment-form" method="post">
+                    <div class="d-md-flex">
+                        <div class="form-group">
+                            <!--Full name-->
+                            <input type="text" name="full_name" class="form-control" placeholder="@formDetails[1]">
+                        </div>
+                    </div>
+                    <div class="d-md-flex">
+                        <div class="form-group">
+                            <!--Email-->
+                            <input type="text" name="email" class="form-control" placeholder="@formDetails[2]">
+                        </div>
+                        <div class="form-group ml-md-4">
+                            <!--Phone-->
+                            <input type="text" name="phone" class="form-control" placeholder="@formDetails[3]">
+                        </div>
+                    </div>
+                    <div class="d-md-flex">
+                        <div class="form-group">
+                            <!--Message-->
+                            <textarea name="message"
+                                      id="" cols="30" rows="2" class="form-control" placeholder="@formDetails[4]"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="text-center">
+                            <input type="submit" value="@formDetails[5]" class="btn btn-primary py-3 px-4">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section ftco-blog-post">
+    <div class="container">
+        <div class="row justify-content-center mt-3 mb-5 pb-3">
+            <div class="col-md-7 heading-section ftco-animate text-center">
+                @Model.L["section_blog_heading"]
+            </div>
+        </div>
+        <div class="row d-flex">
+
+            @foreach (var p in Model.RecentPosts)
+            {
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="blog-entry align-self-stretch">
+                        <a href="/chi-tiet-bai-viet/@p.Id"
+                           class="block-20">
+                            <img class="img img-fluid w-100 h-100" @(p.ThumbnailUrl != null ? Html.Raw($"src=\"{p.ThumbnailUrl}\"") : Html.Raw("")) />
+                        </a>
+                        <div class="text py-4 d-block">
+                            <div class="meta">
+                                <div><a href="#"><span class="icon-calendar"></span>&nbsp; @p.Date?.ToVNDateTime().ToString("dd/MM/yyyy")</a></div>
+                                <div><a href="#"><span class="icon-person"></span> @p.Author</a></div>
+                            </div>
+                            <div class="tag-widget post-tag-container">
+                                <div class="tagcloud">
+                                    @if (p.Tags != null)
+                                    {
+                                        @foreach (var t in p.Tags)
+                                        {
+                                            <a href="#" class="tag-cloud-link">@t</a>
+                                        }
+                                    }
+                                </div>
+                            </div>
+                            <h3 class="heading mt-2"><a href="/chi-tiet-bai-viet/@p.Id">@p.Title</a></h3>
+                            <p>@p.PostDescription</p>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <p class="text-center w-100">
+                <a href="/bai-viet" class="btn btn-primary btn-outline-primary p-3 px-xl-4 py-xl-3">@Model.L["blog_btn"]</a>
+            </p>
+        </div>
+
+    </div>
+</section>
+
+@section custom_script{
+    <script>
+        pageInit();
+        function pageInit() {
+            $('.gallery.img').magnificPopup({
+                gallery: {
+                    enabled: true
+                },
+                type: 'image' // this is default type
+            });
+
+            $('.slider-core-vl').owlCarousel({
+                loop: true,
+                autoplay: true,
+                margin: 0,
+                animateOut: 'fadeOut',
+                animateIn: 'fadeIn',
+                nav: false,
+                autoplayTimeout: 2500,
+                autoplayHoverPause: false,
+                items: 1,
+                navText: ["<span class='ion-md-arrow-back'></span>", "<span class='ion-chevron-right'></span>"],
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: false
+                    },
+                    600: {
+                        items: 1,
+                        nav: false
+                    },
+                    1000: {
+                        items: 1,
+                        nav: false
+                    }
+                }
+            });
+
+        }
+    </script>
+}

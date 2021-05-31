@@ -1,0 +1,259 @@
+﻿@page "/ve-chung-toi"
+@model FranCoffee.Website.Pages.AboutUsModel
+@{
+}
+
+@section custom_head {
+<style>
+    /*.video-header {
+            position: relative;
+            background-color: black;
+            height: 100vh;
+            min-height: 25rem;
+            width: 100%;
+            overflow: hidden;
+        }
+
+            .video-header .breadcrumbs {
+                text-transform: uppercase;
+                font-size: 13px;
+                letter-spacing: 1px;
+            }
+
+                .video-header .breadcrumbs span {
+                    border-bottom: 2px solid rgba(255, 255, 255, 0.1)
+                }
+
+            .video-header video {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                min-width: 100%;
+                min-height: 100%;
+                width: auto;
+                height: auto;
+                z-index: 0;
+                -ms-transform: translateX(-50%) translateY(-50%);
+                -moz-transform: translateX(-50%) translateY(-50%);
+                -webkit-transform: translateX(-50%) translateY(-50%);
+                transform: translateX(-50%) translateY(-50%);
+            }
+
+            .video-header .container {
+                position: relative;
+                z-index: 2;
+            }
+
+            .video-header .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background-color: black;
+                opacity: 0.5;
+                z-index: 1;
+            }*/
+
+    .ftco-counter .icon {
+        background-color: rgba(255,255,255,0.75);
+    }
+
+    .our-mission p {
+        font-size: large;
+    }
+
+    .our-mission .boss-name {
+        font-size: larger
+    }
+
+    @@media (min-width: 768px) {
+        .about-2 .one-half .overlap {
+            margin-left: 150px !important;
+            margin-right: -300px !important;
+        }
+    }
+
+
+    /*@@media (pointer: coarse) and (hover: none) {
+            .video-header {
+                background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+            }
+
+                .video-header video {
+                    display: none;
+                }
+        }*/
+</style>
+}
+
+<section class="common-slider owl-carousel pb-5 mb-5">
+
+    <div class="slider-item" style="background-image: url(/images/bg_3.jpg?v=31032020);" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row slider-text justify-content-center align-items-center">
+                <div class="col-12 slider-content p-3 justify-content-center align-items-center d-flex">
+                    <div class="col-md-9 col-sm-12 text-center ftco-animate">
+                        @Model.L["slider_content"]
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@*<section class="video-header">
+    <div class="overlay"></div>
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"></video>
+    <div class="container h-100">
+        <div class="d-flex h-100 text-center align-items-center justify-content-center">
+            <div class="w-75 text-white">
+                @Model.L["slider_content"]
+            </div>
+        </div>
+    </div>
+</section>*@
+
+<section id="scroll-position" class="ftco-about d-md-flex">
+    <div class="one-half img" style="background-image: url(/images/bg_1.jpg?v=31032020);"></div>
+    <div class="one-half ftco-animate">
+        <div class="overlap">
+            @Model.L["section_about_us"]
+        </div>
+    </div>
+</section>
+
+<section class="ftco-about about-2 d-md-flex">
+    <div class="one-half ftco-animate">
+        <div class="overlap">
+            @Model.L["section_achievement"]
+        </div>
+    </div>
+    <div class="one-half img" style="background-image: url(/images/gallery-6.jpg?v=31032020);"></div>
+</section>
+
+<section class="ftco-section our-mission">
+    <div class="container">
+        <div class="row justify-content-center m-md-5 p-md-5">
+            <div class="col-md-12 heading-section ftco-animate text-center">
+                @Model.L["section_mission"]
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="ftco-counter ftco-bg-dark img" id="section-counter" style="background-image: url(/images/gallery-1.jpg?v=31032020);" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                @{
+                var counterDetails = Model.L["section_counter_details"].Value.Split('_');
+                }
+
+                <div class="row">
+                    <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
+                        <div class="block-18 text-center">
+                            <div class="text">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <img src="~/images/branch.png?v=31032020" class="img img-fluid w-75" />
+                                </div>
+                                <strong class="number" data-number="@Model.BranchCount">0</strong>
+                                <!--Chi nhánh-->
+                                <span>@counterDetails[0]</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
+                        <div class="block-18 text-center">
+                            <div class="text">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <img src="~/images/member.png?v=31032020" class="img img-fluid w-75" />
+                                </div>
+                                <strong class="number" data-number="3979">0</strong>
+                                <!--Khách hàng thân thiết-->
+                                <span>@counterDetails[2]</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
+                        <div class="block-18 text-center">
+                            <div class="text">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <img src="~/images/employee.png?v=31032020" class="img img-fluid w-75" />
+                                </div>
+                                <strong class="number" data-number="100">0</strong>
+                                <span>@counterDetails[3]</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-gallery">
+    <div class="container-wrap">
+        <div class="row justify-content-center mt-5 mb-5 w-100">
+            <div class="col-md-8 heading-section ftco-animate text-center">
+                @Model.L["section_gallery_header"]
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-md-3 ftco-animate">
+                <a href="~/images/gallery-1.jpg?v=31032020" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-1.jpg?v=31032020);">
+                    <div class="icon mb-4 d-flex align-items-center justify-content-center">
+                        <span class="icon-search"></span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 ftco-animate">
+                <a href="~/images/gallery-2.jpg?v=31032020" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-2.jpg?v=31032020);">
+                    <div class="icon mb-4 d-flex align-items-center justify-content-center">
+                        <span class="icon-search"></span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 ftco-animate">
+                <a href="~/images/gallery-3.jpg?v=31032020" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-3.jpg?v=31032020);">
+                    <div class="icon mb-4 d-flex align-items-center justify-content-center">
+                        <span class="icon-search"></span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 ftco-animate">
+                <a href="~/images/gallery-4.jpg?v=31032020" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-4.jpg?v=31032020);">
+                    <div class="icon mb-4 d-flex align-items-center justify-content-center">
+                        <span class="icon-search"></span>
+                    </div>
+                </a>
+            </div>
+            <a href="~/images/gallery-5.jpg?v=31032020" class="gallery img d-none"></a>
+            <a href="~/images/gallery-6.jpg?v=31032020" class="gallery img d-none"></a>
+        </div>
+    </div>
+</section>
+
+@section custom_script{
+<script>
+    pageInit();
+    function pageInit() {
+        $('.gallery.img').magnificPopup({
+            gallery: {
+                enabled: true
+            },
+            type: 'image' // this is default type
+        });
+        //$(".video-header video").attr("src", "/videos/coffee.mp4")
+        //if (window.outerWidth < 768) {
+        //    $(".video-header video").attr("src", "/videos/eunha.mp4");
+        //}
+        //else $(".video-header video").attr("src", "/videos/coffee.mp4");
+    }
+</script>
+
+}

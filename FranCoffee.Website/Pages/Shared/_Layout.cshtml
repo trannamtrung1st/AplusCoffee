@@ -1,0 +1,408 @@
+﻿@using System.Globalization;
+@{
+    string ActiveMenu(string menuName)
+    {
+        return menuName.Equals(Model.Info.Menu) ? "active" : "";
+    }
+}
+
+@inject IHtmlLocalizer<Layout> L
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@Model.Info.Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="@Model.Info.Description"/>
+    <link href="https:/fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https:/fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
+    <link href="https:/fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="/css/animate.css">
+
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="/css/aos.css">
+
+    <link rel="stylesheet" href="/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="/css/flaticon.css">
+    <link rel="stylesheet" href="/css/icomoon.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/custom-style.css">
+
+    <style>
+        html, body {
+            font-family: 'Arial', sans-serif;
+            color: #BBB !important;
+        }
+
+        @@media (max-width: 768px) {
+            html, body {
+                overflow-x: hidden;
+            }
+
+            .ftco-navbar-light {
+                max-height: 100vh;
+                overflow-y: scroll
+            }
+        }
+
+
+        .body-font {
+            font-family: 'Arial', sans-serif !important;
+        }
+
+        .owl-carousel .owl-stage, .owl-carousel.owl-drag .owl-item {
+            -ms-touch-action: auto;
+            touch-action: auto;
+        }
+
+        .slider-content {
+            background-color: rgba(0,0,0,0.6) !important;
+        }
+
+        .ftco-navbar-light {
+            border-bottom: none !important;
+        }
+
+            .ftco-navbar-light.scrolled {
+                /*background: rgba(0,0,0,0.7) !important;*/
+            }
+
+        .ftco-footer {
+            padding: 5rem 0 0 0 !important;
+        }
+
+        .dropdown-item {
+            padding: 0.5rem 1.5rem !important;
+        }
+
+        .dropdown-menu {
+            top: 90% !important;
+        }
+
+        .nav-link {
+            cursor: pointer;
+        }
+
+        .search-inp {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 0 5%;
+            padding-right: 10%;
+            background-color: black;
+        }
+
+            .search-inp .icon {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 10px;
+                font-size: larger;
+            }
+
+                .search-inp .icon:hover {
+                    color: #c49b63;
+                }
+
+        .search-overlay {
+            position: fixed; /* Sit on top of the page content */
+            display: none; /* Hidden by default */
+            width: 100%; /* Full width (cover the whole page) */
+            height: 100%; /* Full height (cover the whole page) */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.6); /* Black background with opacity */
+            z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+            cursor: pointer; /* Add a pointer on hover */
+        }
+
+        .container {
+            max-width: 90% !important;
+        }
+
+        .language-box:hover {
+            color: white !important;
+        }
+
+        .language-box .language-container {
+            background: black !important;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 7px;
+            border: 1.5px solid #c49b63;
+        }
+
+        .language:hover {
+            color: white !important;
+        }
+
+
+        @@media (min-width: 768px) {
+            .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+            }
+
+            .search-inp {
+                padding: 1%;
+                padding-right: 4%;
+            }
+
+                .search-inp .icon {
+                }
+        }
+    </style>
+
+    @if (IsSectionDefined("fb_meta"))
+    {
+        @RenderSection("fb_meta");
+    }
+    else
+    {
+        var fullUrl = Context.Request.Scheme + "://" + Context.Request.Host + Context.Request.Path;
+        var fullImg = Context.Request.Scheme + "://" + Context.Request.Host + "/images/bg_1.jpg?v=31032020";
+        <meta property="fb:app_id" content="192149448860613" />
+        <meta property="og:url" content="@fullUrl" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="@Model.Info.Title" />
+        <meta property="og:description" content="@Model.Info.Description" />
+        <meta property="og:image" content="@fullImg" />
+    }
+
+    @RenderSection("custom_head", false)
+
+</head>
+<body>
+    <!--FACEBOOK-->
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v6.0'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    @{
+        var fb = App.Instance.FbChat;
+    }
+
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat"
+         attribution=setup_tool
+         page_id="@fb.PageId"
+         theme_color="@fb.ThemeColor"
+         logged_in_greeting="@fb.LoginGreeting"
+         logged_out_greeting="@fb.LogoutGreeting">
+    </div>
+    <!-- Facebook sharing -->
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v6.0&appId=192149448860613&autoLogAppEvents=1"></script>
+    <!--END FACEBOOK-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="/">A<h2 class="d-inline">+</h2><small>Coffee</small></a>
+            <button onclick="toggleScroll()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item @ActiveMenu("home")"><a href="/" class="nav-link">@L["menu_home"]</a></li>
+                    <li class="nav-item dropdown @ActiveMenu("about-us")">
+                        <a class="nav-link dropdown-toggle" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@L["menu_about_us"]</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown04">
+                            <a class="dropdown-item" href="/ve-chung-toi">@L["menu_au_detail"]</a>
+                            <a class="dropdown-item" href="/gia-tri-cot-loi">@L["menu_au_core"]</a>
+                            <a class="dropdown-item" href="/tam-nhin-su-menh">@L["menu_au_vision"]</a>
+                            <a class="dropdown-item" href="/co-hoi-nghe-nghiep">@L["menu_au_job"]</a>
+                        </div>
+                    </li>
+                    <li class="nav-item @ActiveMenu("franchise")"><a href="/nhuong-quyen" class="nav-link">@L["menu_franchise"]</a></li>
+                    <li class="nav-item dropdown @ActiveMenu("product-menu")">
+                        <a class="nav-link dropdown-toggle" id="product-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@L["menu_product"]</a>
+
+                        <div class="dropdown-menu" aria-labelledby="product-dropdown">
+                            @foreach (var type in Model.ProductTypes)
+                            {
+                                <a class="dropdown-item" href="/san-pham?type=@type.Id">@type.Name</a>
+                            }
+                        </div>
+                    </li>
+                    <li class="nav-item @ActiveMenu("system")"><a href="/he-thong-aplus-coffee" class="nav-link">@L["menu_system"]</a></li>
+                    <li class="nav-item @ActiveMenu("contact")"><a href="/lien-he" class="nav-link">@L["menu_contact"]</a></li>
+                    <li class="nav-item search" onclick="showSearchInp()">
+                        <a class="nav-link">
+                            <span class="icon icon-search">
+                            </span>
+                        </a>
+                    </li>
+                    @{
+                        var returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "/"
+                        : $"{Context.Request.Path.Value + Context.Request.QueryString}";
+                        returnUrl = Html.UrlEncoder.Encode(returnUrl);
+                        var currentCulture = CultureHelper.CurrentLang;
+                    }
+                    <li class="nav-item">
+                        <div class="language-box nav-link d-inline-block">
+                            <div class="language-container">
+                                <a class="language
+                                   @(currentCulture.ToLower().Equals("vi")?"text-white":"")" href="/language?culture=vi&return_url=@returnUrl">
+                                    <b>VI</b>
+                                </a>
+                                &nbsp;|&nbsp;
+                                <a class="language
+                                   @(currentCulture.ToLower().Equals("en")?"text-white":"")" href="/language?culture=en&return_url=@returnUrl">
+                                    <b>EN</b>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="search-overlay" onclick="closeSearchInp()">
+                <form action="/ket-qua-tim-kiem" method="get">
+                    <div class="form-group search-inp w-100">
+                        <input type="text" name="q" onclick="event.stopPropagation()"
+                               class="form-control color-gold" placeholder="@L["txt_search_placeholder"]">
+                        <span class="icon icon-search p-4"
+                              onclick="event.stopPropagation();$('.search-overlay form').submit()"></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- END nav -->
+    <!-- content -->
+    @RenderBody()
+
+    <footer class="ftco-footer ftco-section img">
+        <div class="overlay"></div>
+        <div class="container">
+            <!--<div class="row mb-3">-->
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-5 mb-md-5">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2 color-gold">@L["footer_about_us_header"]</h2>
+                        <p class="text-justify mr-4">@L["footer_about_us"]</p>
+                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                            <li class="ftco-animate"><a href="/#"><span class="icon-twitter"></span></a></li>
+                            <li class="ftco-animate"><a href="/#"><span class="icon-facebook"></span></a></li>
+                            <li class="ftco-animate"><a href="/#"><span class="icon-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 mb-5 mb-md-5">
+                    <div class="ftco-footer-widget mb-4 ml-md-4">
+                        <h2 class="ftco-heading-2 color-gold">A+ Coffee</h2>
+                        <div class="row">
+                            @L["footer_cafeaplus_detail"]
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2 color-gold">@L["footer_question_header"]</h2>
+                        <div class="block-23 mb-3">
+                            <ul>
+                                @L["footer_question"]
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-md-12 text-center">
+
+                    <p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https:/colorlib.com" target="_blank">Colorlib</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                    <div>
+                        Custom and built by <a class="color-gold" href="mailto:trannamtrung1st@gmail.com">TNT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.easing.1.3.js"></script>
+    <script src="/js/jquery.waypoints.min.js"></script>
+    <script src="/js/jquery.stellar.min.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/jquery.magnific-popup.min.js"></script>
+    <script src="/js/aos.js"></script>
+    <script src="/js/jquery.animateNumber.min.js"></script>
+    <script src="/js/bootstrap-datepicker.js"></script>
+    <script src="/js/jquery.timepicker.min.js"></script>
+    <script src="/js/scrollax.min.js"></script>
+    @*<script src="https:/maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="/js/google-map.js"></script>*@
+    <script src="/js/main.js"></script>
+
+    <script>
+        function showSearchInp() {
+            $(".search-overlay").show();
+            $(".search-inp input").focus();
+        }
+
+        function closeSearchInp() {
+            $(".search-overlay").hide();
+        }
+
+        function enableScroll() {
+            $('html').css({ 'overflow-y': 'unset' });
+        }
+        function disableScroll() {
+            $('html').css({ 'overflow-y': 'hidden' });
+        }
+
+        var toggleScroll = (function () {
+            var enable = true;
+            return function () {
+                enable = !enable;
+                if (enable)
+                    enableScroll();
+                else disableScroll();
+            }
+        })();
+
+        pageInit();
+        function pageInit() {
+        }
+
+    </script>
+
+    @RenderSection("custom_script", false)
+</body>
+</html>

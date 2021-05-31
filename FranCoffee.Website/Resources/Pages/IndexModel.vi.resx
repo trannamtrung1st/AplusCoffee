@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="blog_btn" xml:space="preserve">
+    <value>Xem thêm</value>
+  </data>
+  <data name="branch_btn" xml:space="preserve">
+    <value>Xem tất cả</value>
+  </data>
+  <data name="contact_request_for_support" xml:space="preserve">
+    <value>Liên hệ để được hỗ trợ</value>
+  </data>
+  <data name="register_form_details" xml:space="preserve">
+    <value>Đăng kí ngay_Họ và Tên_Email_Số điện thoại_Tin nhắn_Xác nhận</value>
+  </data>
+  <data name="section_blog_heading" xml:space="preserve">
+    <value>&lt;span class="subheading"&gt;Posts&lt;/span&gt;
+&lt;h2 class="mb-4 mt-3"&gt;Bài viết mới&lt;/h2&gt;</value>
+  </data>
+  <data name="section_branches" xml:space="preserve">
+    <value>&lt;span class="subheading"&gt;Stores&lt;/span&gt;
+                    &lt;h2 class="mb-4"&gt;Chi nhánh mới nhất&lt;/h2&gt;
+                    &lt;p class="mb-4"&gt;A+ Coffee với sứ mệnh mang đến những sản phẩm cafe sạch và đậm bản sắc phong cách Việt. Với hơn 8 năm kinh nghiệm cùng thế mạnh về hệ thống A+ coffee nhượng quyền. Cho đến nay A+ coffee không ngừng phát triển đẩy mạnh thương hiệu nhượng quyền và phát triển sản phẩm mở rộng trên thị trường&lt;/p&gt;</value>
+  </data>
+  <data name="section_core_value" xml:space="preserve">
+    <value>&lt;div class="heading-section ftco-animate "&gt;
+                &lt;span class="subheading"&gt;Core Value&lt;/span&gt;
+                &lt;h2 class="mb-4"&gt;Giá trị cốt lõi&lt;/h2&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;h3 class="heading"&gt;
+                            A+ Coffee
+                        &lt;/h3&gt;
+                        &lt;p&gt;
+                            Giá trị cốt lõi của A+ Coffee được xây dựng dựa trên những tiêu chí sự tự tin, uy tín, đạo đức, tâm với nghề nhiệt huyết, đoàn kết, tôn trọng và trân trọng cá nhân xuất sắc đồng hành cùng phát triển.
+                        &lt;/p&gt;
+            &lt;/div&gt;</value>
+  </data>
+  <data name="section_customer" xml:space="preserve">
+    <value>&lt;span class="subheading"&gt;Customers&lt;/span&gt;
+                &lt;h2 class="mb-4 mt-2"&gt;Khách hàng nói gì&lt;/h2&gt;
+                &lt;p&gt;A+ coffee luôn lấy khách hàng làm kim chỉ nam để thay đổi điều chỉnh phấn đấu hoàn hảo hơn. Và thế chúng tôi chân thành cảm ơn sâu sắc và ghi nhận những phê bình và đóng góp của khách hàng dành cho A+ coffee chúng tôi.
+&lt;/p&gt;</value>
+  </data>
+  <data name="section_franchise_procedure" xml:space="preserve">
+    <value>&lt;h2&gt;7 Bước quy trình làm chủ quán cafe &lt;span class="color-gold"&gt;A+ Coffee&lt;/span&gt; Nhượng Quyền.&lt;/h2&gt;
+&lt;p&gt;
+&lt;span class="text-info"&gt;Bước 1 (Liên Hệ)&lt;/span&gt; : Đối tác liên hệ với A+ Coffee (qua điện thoại, internet,...)
+&lt;br/&gt;&lt;span class="text-info"&gt; Bước 2 (Cung cấp thông tin)&lt;/span&gt; : A+ Coffee cung cấp thông tin nhượng quyền cho đối tác mong muốn khởi nghiệp. 
+&lt;br/&gt;&lt;span class="text-info"&gt; Bước 3 (Gặp gỡ tư vấn)&lt;/span&gt; : Gặp trực tiếp giữa 2 bên, đối tác tới trụ sở A+ Coffee, nghe tư vấn cụ thể và được giải đáp các thắc mắc.
+&lt;br/&gt;&lt;span class="text-info"&gt; Bước 4 (Khảo sát)&lt;/span&gt; : A+ Coffee khảo sát địa điểm, kiểm tra chất lượng đối tác xem có đủ điều kiện để hợp tác hay không.
+&lt;br/&gt;&lt;span class="text-info"&gt; Bước 5 ( Ký hợp đồng )&lt;/span&gt; : Ký hợp đồng nhượng quyền, đối tác thanh toán phí nhượng quyền. 
+&lt;br/&gt;&lt;span class="text-info"&gt; Bước 6 ( Setup nhượng quyền) &lt;/span&gt;: A+ Coffee tiến hành thi công thiết kế cửa hàng, nhập nguyên liệu, máy móc, đào tạo nhân sự,...
+&lt;br/&gt;&lt;span class="text-info"&gt; Bước 7 (Vận hành hoạt động)&lt;/span&gt; : Sau 2 - 4 tuần cửa hàng đi vào hoạt động.
+&lt;/p&gt;</value>
+  </data>
+  <data name="service1" xml:space="preserve">
+    <value>&lt;h3 class="heading"&gt;
+                            Khách hàng luôn là đối tác
+                        &lt;/h3&gt;
+                        &lt;p&gt;
+                            A+ Coffee luôn lấy khách hàng làm kim chỉ nam để thay đổi điều chỉnh phấn đấu hoàn hảo hơn. Sự phồn thịnh và giá trị khách hàng nhận được cũng là sự phồn thịnh và giá trị của A+ coffee tạo dựng. Chúng tôi mang đến cho khách hàng kiến thức, kinh nghiệm, nhiệt huyết cùng với tri thức để tạo ra các sản phẩm tốt nhất.
+                        &lt;/p&gt;</value>
+  </data>
+  <data name="service2" xml:space="preserve">
+    <value>&lt;h3 class="heading"&gt;
+                            Đổi mới và tận tâm
+                        &lt;/h3&gt;
+                        &lt;p&gt;
+                            Sự đổi mới luôn là cần thiết để ngày càng hoàn thiện. Hiểu được điều đó, chúng tôi luôn nhìn ra thế giới, tiếp thu, học hỏi những điều mới để làm hài lòng khách hàng. Mỗi sản phẩm đến khách hàng luôn là sản phẩm tốt nhất của chúng tôi. 
+                        &lt;/p&gt;</value>
+  </data>
+  <data name="service3" xml:space="preserve">
+    <value>&lt;h3 class="heading"&gt;
+                            CHIA SẺ
+                        &lt;/h3&gt;
+                        &lt;p&gt;
+                            Chúng tôi không bán cà phê mà chúng
+                            tôi bán cà phê tốt nhất vì BẠN là tuyệt vời nhất.
+                            Chúng tôi muốn chia sẻ sau mỗi ly cà phê là NIỀM TIN VÀO CUỘC SỐNG.
+                        &lt;/p&gt;</value>
+  </data>
+  <data name="service4" xml:space="preserve">
+    <value>&lt;h3 class="heading"&gt;
+                            KHÁCH HÀNG LÀ TRỌNG TÂM
+                        &lt;/h3&gt;
+                        &lt;p&gt;
+                            Với A+ Coffee khách hàng luôn là trung tâm
+                            để chúng tôi đổi mới, điều chỉnh và phấn đấu.
+                            Chúng tôi thấu hiểu rằng, mang lại giá trị cho
+                            khách hàng là mạng lại giá trị cho chính mình
+                        &lt;/p&gt;</value>
+  </data>
+  <data name="service5" xml:space="preserve">
+    <value>&lt;h3 class="heading"&gt;
+                            GIÁ TRỊ HÀNG ĐẦU
+                        &lt;/h3&gt;
+                        &lt;p&gt;
+                            Không một sản phẩm hay dịch vụ nào là không có giá trị.
+                            Thế nhưng với A+ Coffee giá trị chúng tôi mang
+                            đến cho khách hàng phải là
+                            giá trị tốt nhất bằng tất cả tâm huyết là lòng đam mê để tạo ra.
+                        &lt;/p&gt;</value>
+  </data>
+  <data name="service6" xml:space="preserve">
+    <value>&lt;h3 class="heading"&gt;
+                            CHIA SẺ
+                        &lt;/h3&gt;
+                        &lt;p&gt;
+                            Chúng tôi không bán cà phê mà chúng
+                            tôi bán cà phê tốt nhất vì BẠN là tuyệt vời nhất.
+                            Chúng tôi muốn chia sẻ sau mỗi ly cà phê là NIỀM TIN VÀO CUỘC SỐNG.
+                        &lt;/p&gt;</value>
+  </data>
+  <data name="slide1_content" xml:space="preserve">
+    <value>&lt;span class="subheading"&gt;Intro&lt;/span&gt;
+                    &lt;h1 class="mb-4"&gt;A+ Coffee&lt;/h1&gt;
+                    &lt;p class="mb-4 mb-md-5"&gt;
+                        &lt;h2 class="body-font"&gt;Sống sạch, Cà phê sạch !&lt;/h2&gt;
+                    &lt;/p&gt;
+                    &lt;p&gt;
+                        &lt;a href="/ve-chung-toi" class="btn btn-primary p-3 px-xl-4 py-xl-3"&gt;Tìm hiểu thêm&lt;/a&gt;
+                    &lt;/p&gt;</value>
+  </data>
+  <data name="slide2_content" xml:space="preserve">
+    <value>&lt;span class="subheading"&gt;Franchise&lt;/span&gt;
+                    &lt;h1 class="mb-4"&gt;Nhượng quyền&lt;/h1&gt;
+                    &lt;p class="mb-4 mb-md-5"&gt;
+                        HIỆN THỰC HÓA GIẤC MƠ LÀM CHỦ CHỈ VỚI 79 TRIỆU, TẠI SAO KHÔNG ??? &lt;br/&gt;
+ HÃY ĐỂ CHÚNG TÔI GIÚP BẠN BIẾN GIẤC MƠ ĐÓ THÀNH HIỆN THỰC
+                    &lt;/p&gt;
+                    &lt;p&gt;
+                        &lt;a href="/nhuong-quyen" class="btn btn-primary p-3 px-xl-4 py-xl-3"&gt;Mô hình nhượng quyền&lt;/a&gt;
+                        &lt;a href="/lien-he" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3"&gt;Liên hệ trực tiếp (0932034539 Mr.An)&lt;/a&gt;
+                    &lt;/p&gt;</value>
+  </data>
+  <data name="slide3_content" xml:space="preserve">
+    <value>&lt;span class="subheading"&gt;Product&lt;/span&gt;
+                    &lt;h1 class="mb-4"&gt;Sản phẩm&lt;/h1&gt;
+                    &lt;p class="mb-4 mb-md-5"&gt;
+                        &lt;h3 class="body-font"&gt;Với A+ Coffee, nơi đây chúng tôi không chỉ cung ứng những ly cà phê năng lượng tuyệt hảo mà còn cung ứng những giấc mơ cho bạn...&lt;/h3&gt;
+                    &lt;/p&gt;
+                    &lt;p&gt;
+                        &lt;a href="/san-pham" class="btn btn-primary p-3 px-xl-4 py-xl-3"&gt;Xem thêm&lt;/a&gt;
+                    &lt;/p&gt;</value>
+  </data>
+  <data name="testimony1" xml:space="preserve">
+    <value>&lt;blockquote&gt;
+                        &lt;p&gt;&amp;ldquo;Các bạn phục vụ rất nhiệt tình dễ thương 😍 đồ uống Ok nhé giá phải chăng . Không gian âm nhạc nhẹ nhàng 🥰&amp;rdquo;&lt;/p&gt;
+                    &lt;/blockquote&gt;
+                    &lt;div class="author d-flex mt-4"&gt;
+                        &lt;div class="image mr-3 align-self-center"&gt;
+                            &lt;img src="/images/danhmap.jpg?v=31032020" alt=""&gt;
+                        &lt;/div&gt;
+                        &lt;div class="name align-self-center"&gt;Tấn Danh &lt;span class="position"&gt;(21 tuổi)&lt;/span&gt;&lt;/div&gt;
+                    &lt;/div&gt;</value>
+  </data>
+  <data name="testimony2" xml:space="preserve">
+    <value>&lt;blockquote&gt;
+                        &lt;p&gt;&amp;ldquo;Lần đầu ghé quán và rất thích không khí cũng như cách phục vụ ở đây. Không khí rất thoải mái, nhạc hay, không quá ồn ào, tạo cảm giác thoải mái dễ chịu. Đạt được tất cả những yêu cầu mình thích. Mong là sẽ giữ vững được những điều tốt đẹp này lâu dài. Mình sẽ ghé A+ Coffee nhiều lần nữa.&amp;rdquo;&lt;/p&gt;
+                    &lt;/blockquote&gt;
+                    &lt;div class="author d-flex mt-4"&gt;
+                        &lt;div class="image mr-3 align-self-center"&gt;
+                            &lt;img src="/images/bentran.jpg?v=31032020" alt=""&gt;
+                        &lt;/div&gt;
+                        &lt;div class="name align-self-center"&gt;Ben Trần&lt;span class="position"&gt;(26 tuổi)&lt;/span&gt;&lt;/div&gt;
+                    &lt;/div&gt;</value>
+  </data>
+  <data name="testimony3" xml:space="preserve">
+    <value>&lt;blockquote&gt;
+                        &lt;p&gt;&amp;ldquo;Không gian quán mát mẻ, wifi cực mạnh thoải mái cho việc chơi game, nhân viên cũng dễ thương và giá cả cũng bình dân. Tối đi làm về mình thường ghé quán cảm giác thoải mái sau 1 ngày làm việc.&amp;rdquo;&lt;/p&gt;
+                    &lt;/blockquote&gt;
+                    &lt;div class="author d-flex mt-4"&gt;
+                        &lt;div class="image mr-3 align-self-center"&gt;
+                            &lt;img src="/images/lethu.jpg?v=31032020" alt=""&gt;
+                        &lt;/div&gt;
+                        &lt;div class="name align-self-center"&gt;Lê Thư&lt;span class="position"&gt;(30 tuổi)&lt;/span&gt;&lt;/div&gt;
+                    &lt;/div&gt;</value>
+  </data>
+  <data name="testimony4" xml:space="preserve">
+    <value>&lt;blockquote&gt;
+                        &lt;p&gt;&amp;ldquo;Được chị cùng công ty rủ ra đây riết thành thói quen luôn! Mình vốn khó tính về mặt thẩm mỹ, cũng phải công nhận là quán rất chú trọng vào thiết kế và bày trí. Từng góc nhỏ của quán đều rất đẹp, phù hợp cho các bạn "sống ảo" hoặc tự kỷ như mình.&amp;rdquo;&lt;/p&gt;
+                    &lt;/blockquote&gt;
+                    &lt;div class="author d-flex mt-4"&gt;
+                        &lt;div class="image mr-3 align-self-center"&gt;
+                            &lt;img src="/images/phuongnga.jpg?v=31032020" alt=""&gt;
+                        &lt;/div&gt;
+                        &lt;div class="name align-self-center"&gt;Phương Nga&lt;span class="position"&gt;(24 tuổi)&lt;/span&gt;&lt;/div&gt;
+                    &lt;/div&gt;</value>
+  </data>
+  <data name="testimony5" xml:space="preserve">
+    <value>&lt;blockquote&gt;
+                        &lt;p&gt;&amp;ldquo;Quán nhân viên rất dễ thương, nhiệt tình. Không gian quán rất thoải mái. Chúc quán thành công hơn và giữ mãi sự dễ thương này nha. Sẽ đến ủng hộ quán dài dài. Cố lên nha ❤️
+&amp;rdquo;&lt;/p&gt;
+                    &lt;/blockquote&gt;
+                    &lt;div class="author d-flex mt-4"&gt;
+                        &lt;div class="image mr-3 align-self-center"&gt;
+                            &lt;img src="/images/myduyen.jpg?v=31032020" alt=""&gt;
+                        &lt;/div&gt;
+                        &lt;div class="name align-self-center"&gt;Mỹ Duyên &lt;span class="position"&gt;(20 tuổi)&lt;/span&gt;&lt;/div&gt;
+                    &lt;/div&gt;</value>
+  </data>
+  <data name="title" xml:space="preserve">
+    <value>Trang chủ</value>
+  </data>
+</root>

@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="blog_btn" xml:space="preserve">
+    <value>Read more</value>
+  </data>
+  <data name="branch_btn" xml:space="preserve">
+    <value>View all</value>
+  </data>
+  <data name="contact_request_for_support" xml:space="preserve">
+    <value>Contact us for further support</value>
+  </data>
+  <data name="register_form_details" xml:space="preserve">
+    <value>Register now_Full name_Email_Phone_Message_Confirm</value>
+  </data>
+  <data name="section_blog_heading" xml:space="preserve">
+    <value>&lt;span class="subheading"&gt;Posts&lt;/span&gt;
+&lt;h2 class="mb-4 mt-3"&gt;Recent posts&lt;/h2&gt;</value>
+  </data>
+  <data name="section_branches" xml:space="preserve">
+    <value>&lt;span class="subheading"&gt;Stores&lt;/span&gt;
+                    &lt;h2 class="mb-4"&gt;Newest stores&lt;/h2&gt;
+                    &lt;p class="mb-4"&gt;A + Coffee's mission is to bring clean and bold Vietnamese style coffee products. With over 8 years of experience and strengths of the A + coffee franchise system. So far, A + coffee has been continuously developing, promoting its franchise brand and developing expanded products in the market&lt;/p&gt;</value>
+  </data>
+  <data name="section_core_value" xml:space="preserve">
+    <value>&lt;div class="heading-section ftco-animate "&gt;
+                &lt;span class="subheading"&gt;Core Value&lt;/span&gt;
+                &lt;h2 class="mb-4"&gt;Core value&lt;/h2&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;h3 class="heading"&gt;
+                            A+ Coffee
+                        &lt;/h3&gt;
+                        &lt;p&gt;
+                            The core values of A + Coffee are based on the criteria of confidence, prestige, morality, and enthusiasm for solidarity, solidarity, respect and respect for individual excellence along with development.
+                        &lt;/p&gt;
+            &lt;/div&gt;</value>
+  </data>
+  <data name="section_customer" xml:space="preserve">
+    <value>&lt;span class="subheading"&gt;Customers&lt;/span&gt;
+                &lt;h2 class="mb-4 mt-2"&gt;What customers said&lt;/h2&gt;
+                &lt;p&gt;A + coffee always takes customers as a guideline to change and adjust to perfect. And so we deeply thank and acknowledge the customer comments and contributions to our A + coffee.&lt;/p&gt;</value>
+  </data>
+  <data name="section_franchise_procedure" xml:space="preserve">
+    <value>&lt;h2&gt; 7 Steps to owning &lt;span class="color-gold"&gt;A+ Coffee&lt;/span&gt; Franchise cafe. &lt;/h2&gt;
+&lt;p&gt;
+&lt;span class="text-info"&gt; Step 1 (Contact) &lt;/span&gt;: Partner contacting with A+ Coffee (via phone, internet, ...)
+&lt;br/&gt; &lt;span class="text-info"&gt; Step 2 (Provide information) &lt;/span&gt;: A+ Coffee provides franchise information for partners who wish to start a business.
+&lt;br/&gt; &lt;span class="text-info"&gt; Step 3 (Consultation meeting) &lt;/span&gt;: Meet face-to-face with partners, partners to A+ Coffee headquarters, listen to specific advice and answer questions.
+&lt;br/&gt; &lt;span class="text-info"&gt; Step 4 (Survey) &lt;/span&gt;: A+ Coffee surveys the location, checks the quality of partners to see if they are eligible to cooperate or not.
+&lt;br/&gt; &lt;span class="text-info"&gt; Step 5 (Sign a contract) &lt;/span&gt;: Sign a franchise agreement, partners pay franchise fees.
+&lt;br/&gt; &lt;span class="text-info"&gt; Step 6 (Franchise Setup) &lt;/span&gt;: A+ Coffee conducts store design, importing materials, machines, training personnel, ...
+&lt;br/&gt; &lt;span class="text-info"&gt; Step 7 (Operating operation) &lt;/span&gt;: After 2-4 weeks the store is operational.
+&lt;/p&gt;</value>
+  </data>
+  <data name="service1" xml:space="preserve">
+    <value>&lt;h3 class="heading"&gt;
+                            Customers are always partners
+                        &lt;/h3&gt;
+                        &lt;p&gt;
+                            A + Coffee always takes customers as a guideline to change adjustments to strive for more perfect. The prosperity and value the customer receives is also the prosperity and value of A + coffee. We bring our customers knowledge, experience, enthusiasm along with knowledge to create the best products.
+                        &lt;/p&gt;</value>
+  </data>
+  <data name="service2" xml:space="preserve">
+    <value>&lt;h3 class="heading"&gt;
+                            Innovation and devotion
+                        &lt;/h3&gt;
+                        &lt;p&gt;
+                            Innovation is always needed to improve. Understanding that, we always see the world, absorb and learn new things to satisfy our customers. Every product to customers is always our best product.
+                        &lt;/p&gt;</value>
+  </data>
+  <data name="service3" xml:space="preserve">
+    <value>&lt;h3 class="heading"&gt;
+                            SHARING
+                        &lt;/h3&gt;
+                        &lt;p&gt;
+                            Chúng tôi không bán cà phê mà chúng
+                            tôi bán cà phê tốt nhất vì BẠN là tuyệt vời nhất.
+                            Chúng tôi muốn chia sẻ sau mỗi ly cà phê là NIỀM TIN VÀO CUỘC SỐNG.
+                        &lt;/p&gt;</value>
+  </data>
+  <data name="service4" xml:space="preserve">
+    <value>&lt;h3 class="heading"&gt;
+                            KHÁCH HÀNG LÀ TRỌNG TÂM
+                        &lt;/h3&gt;
+                        &lt;p&gt;
+                            Với A+ Coffee khách hàng luôn là trung tâm
+                            để chúng tôi đổi mới, điều chỉnh và phấn đấu.
+                            Chúng tôi thấu hiểu rằng, mang lại giá trị cho
+                            khách hàng là mạng lại giá trị cho chính mình
+                        &lt;/p&gt;</value>
+  </data>
+  <data name="service5" xml:space="preserve">
+    <value>&lt;h3 class="heading"&gt;
+                            GIÁ TRỊ HÀNG ĐẦU
+                        &lt;/h3&gt;
+                        &lt;p&gt;
+                            Không một sản phẩm hay dịch vụ nào là không có giá trị.
+                            Thế nhưng với A+ Coffee giá trị chúng tôi mang
+                            đến cho khách hàng phải là
+                            giá trị tốt nhất bằng tất cả tâm huyết là lòng đam mê để tạo ra.
+                        &lt;/p&gt;</value>
+  </data>
+  <data name="service6" xml:space="preserve">
+    <value>&lt;h3 class="heading"&gt;
+                            CHIA SẺ
+                        &lt;/h3&gt;
+                        &lt;p&gt;
+                            Chúng tôi không bán cà phê mà chúng
+                            tôi bán cà phê tốt nhất vì BẠN là tuyệt vời nhất.
+                            Chúng tôi muốn chia sẻ sau mỗi ly cà phê là NIỀM TIN VÀO CUỘC SỐNG.
+                        &lt;/p&gt;</value>
+  </data>
+  <data name="slide1_content" xml:space="preserve">
+    <value>&lt;span class="subheading"&gt;Intro&lt;/span&gt;
+                    &lt;h1 class="mb-4"&gt;A+ Coffee&lt;/h1&gt;
+                    &lt;p class="mb-4 mb-md-5"&gt;
+                        &lt;h2 class="body-font"&gt;Clean living, clean coffee !&lt;/h2&gt;
+                    &lt;/p&gt;
+                    &lt;p&gt;
+                        &lt;a href="/ve-chung-toi" class="btn btn-primary p-3 px-xl-4 py-xl-3"&gt;Explore&lt;/a&gt;
+                    &lt;/p&gt;</value>
+  </data>
+  <data name="slide2_content" xml:space="preserve">
+    <value>&lt;span class="subheading"&gt;Franchise&lt;/span&gt;
+                    &lt;h1 class="mb-4"&gt;Franchise&lt;/h1&gt;
+                    &lt;p class="mb-4 mb-md-5"&gt;
+                        FACTORING DREAM MAKING ONLY WITH 79 MILLION, WHY NOT ??? &lt;br/&gt;
+  LET US HELP YOU MAKE THAT DREAM COME TRUE
+                    &lt;/p&gt;
+                    &lt;p&gt;
+                        &lt;a href="/nhuong-quyen" class="btn btn-primary p-3 px-xl-4 py-xl-3"&gt;Franchise model&lt;/a&gt;
+                        &lt;a href="/lien-he" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3"&gt;Contact us now (0932034539 Mr.An)&lt;/a&gt;
+                    &lt;/p&gt;</value>
+  </data>
+  <data name="slide3_content" xml:space="preserve">
+    <value>&lt;span class="subheading"&gt;Product&lt;/span&gt;
+                    &lt;h1 class="mb-4"&gt;Product&lt;/h1&gt;
+                    &lt;p class="mb-4 mb-md-5"&gt;
+                        &lt;h3 class="body-font"&gt;With A+ Coffee, here we not only provide excellent energy coffee but also provide you with dreams ...&lt;/h3&gt;
+                    &lt;/p&gt;
+                    &lt;p&gt;
+                        &lt;a href="/san-pham" class="btn btn-primary p-3 px-xl-4 py-xl-3"&gt;Explore&lt;/a&gt;
+                    &lt;/p&gt;</value>
+  </data>
+  <data name="testimony1" xml:space="preserve">
+    <value>&lt;blockquote&gt;
+                        &lt;p&gt;&amp;ldquo;The waiters are very enthusiastic and lovely 😍 Ok drinks are affordable. Gentle music space 🥰&amp;rdquo;&lt;/p&gt;
+                    &lt;/blockquote&gt;
+                    &lt;div class="author d-flex mt-4"&gt;
+                        &lt;div class="image mr-3 align-self-center"&gt;
+                            &lt;img src="/images/danhmap.jpg?v=31032020" alt=""&gt;
+                        &lt;/div&gt;
+                        &lt;div class="name align-self-center"&gt;Tấn Danh &lt;span class="position"&gt;(21 years old)&lt;/span&gt;&lt;/div&gt;
+                    &lt;/div&gt;</value>
+  </data>
+  <data name="testimony2" xml:space="preserve">
+    <value>&lt;blockquote&gt;
+                        &lt;p&gt;&amp;ldquo;First time visiting the restaurant and enjoyed the atmosphere and service here. The atmosphere is very comfortable, good music, not too noisy, creating a comfortable feeling. Achieve all the requirements you like. Hope to keep these good things going for long. I will visit A + Coffee many times.&amp;rdquo;&lt;/p&gt;
+                    &lt;/blockquote&gt;
+                    &lt;div class="author d-flex mt-4"&gt;
+                        &lt;div class="image mr-3 align-self-center"&gt;
+                            &lt;img src="/images/bentran.jpg?v=31032020" alt=""&gt;
+                        &lt;/div&gt;
+                        &lt;div class="name align-self-center"&gt;Ben Trần&lt;span class="position"&gt;(26 years old)&lt;/span&gt;&lt;/div&gt;
+                    &lt;/div&gt;</value>
+  </data>
+  <data name="testimony3" xml:space="preserve">
+    <value>&lt;blockquote&gt;
+                        &lt;p&gt;&amp;ldquo;Cool bar space, extremely strong wifi comfortable for gaming, the staff is also cute and the price is also affordable. At night, I come home from work and feel comfortable after a working day.&amp;rdquo;&lt;/p&gt;
+                    &lt;/blockquote&gt;
+                    &lt;div class="author d-flex mt-4"&gt;
+                        &lt;div class="image mr-3 align-self-center"&gt;
+                            &lt;img src="/images/lethu.jpg?v=31032020" alt=""&gt;
+                        &lt;/div&gt;
+                        &lt;div class="name align-self-center"&gt;Lê Thư&lt;span class="position"&gt;(30 years old)&lt;/span&gt;&lt;/div&gt;
+                    &lt;/div&gt;</value>
+  </data>
+  <data name="testimony4" xml:space="preserve">
+    <value>&lt;blockquote&gt;
+                        &lt;p&gt;&amp;ldquo;Get into the habit of being invited by the company and her company! I am inherently fastidious in aesthetics, I must admit that the shop pays great attention to design and decoration. Every little corner of the restaurant is very nice, suitable for you "virtual living" or autism like yourself.&amp;rdquo;&lt;/p&gt;
+                    &lt;/blockquote&gt;
+                    &lt;div class="author d-flex mt-4"&gt;
+                        &lt;div class="image mr-3 align-self-center"&gt;
+                            &lt;img src="/images/phuongnga.jpg?v=31032020" alt=""&gt;
+                        &lt;/div&gt;
+                        &lt;div class="name align-self-center"&gt;Phương Nga&lt;span class="position"&gt;(24 years old)&lt;/span&gt;&lt;/div&gt;
+                    &lt;/div&gt;</value>
+  </data>
+  <data name="testimony5" xml:space="preserve">
+    <value>&lt;blockquote&gt;
+                        &lt;p&gt;&amp;ldquo;The staff is very cute and enthusiastic. The space is very comfortable. I wish the shop more success and keep this cuteness forever. Will support long-term shop. Fighting hard ❤️&amp;rdquo;&lt;/p&gt;
+                    &lt;/blockquote&gt;
+                    &lt;div class="author d-flex mt-4"&gt;
+                        &lt;div class="image mr-3 align-self-center"&gt;
+                            &lt;img src="/images/myduyen.jpg?v=31032020" alt=""&gt;
+                        &lt;/div&gt;
+                        &lt;div class="name align-self-center"&gt;Mỹ Duyên &lt;span class="position"&gt;(20 years old)&lt;/span&gt;&lt;/div&gt;
+                    &lt;/div&gt;</value>
+  </data>
+  <data name="title" xml:space="preserve">
+    <value>Home</value>
+  </data>
+</root>

@@ -1,0 +1,124 @@
+﻿@page "/san-pham/{id}"
+@model FranCoffee.Website.Pages.SingleModel
+@{
+}
+@section custom_head{ 
+<style>
+    .pro-name {
+        border-left-width: 0px;
+        border-bottom-width: 2px;
+        border-top-width: 0px;
+        border-right-width: 0px;
+        border-style: solid;
+        border-color: #c49b63;
+        padding-right: 30px;
+    }
+</style>
+}
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p class="breadcrumbs">
+                    <span class="mr-2">
+                        <a class="color-gold" href="/">@Model.L["home"]</a>
+                    </span>/
+                    <span class="m-2">
+                        <a class="color-gold text-uppercase" href="/san-pham?type=@Model.ProductType.Id">@Model.ProductType.Name</a>
+                    </span>/
+                    <span class="m-2 text-uppercase">@Model.Product.Name</span>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-lg-6 mb-5 ftco-animate">
+                @{
+                    var ava = Model.Product.Images != null ? Model.Product.Images.FirstOrDefault(i => i.IsAvatar == true)?.RelPath : null;
+                    if (ava != null)
+                    {
+                        <a href="@ava" class="img-@Model.Product.Id">
+                            <img src="@ava" class="img img-fluid w-100" alt="@Model.Product.Name">
+                        </a>
+                    }
+                }
+            </div>
+            <div class="col-lg-6 product-details pl-md-5 ftco-animate">
+                <div class="mb-3">
+                    <h3 class="pro-name d-inline">@Model.Product.Name</h3>
+                </div>
+                <div class="font-weight-bold">@Model.L["category"]</div>
+                <p class="color-gold text-uppercase">@Model.Product.CategoryName</p>
+                
+                <div class="font-weight-bold">@Model.L["description"]</div>
+                <p>
+                    @(Model.Product.Description ?? Model.L["no_description"].Value)
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section ftco-animate text-center">
+                <span class="subheading mb-1">Discover</span>
+                <h2 class="mb-4">@Model.L["related"]</h2>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var p in Model.RelatedProducts)
+            {
+                <div class="col-md-3">
+                    <div class="menu-entry">
+                        @{
+                            var pava = p.Images != null ? p.Images.FirstOrDefault(i => i.IsAvatar == true)?.RelPath : null;
+                            if (pava != null)
+                            {
+                                <a href="/san-pham/@p.Id" class="">
+                                    <img src="@pava" class="img img-fluid w-100" alt="@Model.Product.Name">
+                                </a>
+                            }
+                        }
+                        <div class="text text-center pt-4">
+                            <h3><a href="/san-pham/@p.Id">@p.Name</a></h3>
+                            <p>@p.Description</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+@section custom_script{
+
+    <script>
+    pageInit();
+    function pageInit(){
+        @{
+            var item = new
+            {
+                id = Model.Product.Id,
+                images = Model.Product.Images.Select(im => new
+                {
+                    src = im.RelPath
+                }).ToList()
+            };
+
+        }
+
+        var item = @Html.Raw(Json.Serialize(item));
+        $('.img-' + item.id).magnificPopup({
+            items: item.images,
+            gallery: {
+                enabled: true
+            },
+            type: 'image' // this is default type
+        });
+
+    }
+    </script>
+}

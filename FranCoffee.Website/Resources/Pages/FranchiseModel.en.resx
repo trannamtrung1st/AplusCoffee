@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="register_form_details" xml:space="preserve">
+    <value>Register now_Full name_Email_Phone_Message_Confirm</value>
+  </data>
+  <data name="section_benefit" xml:space="preserve">
+    <value>&lt;h2&gt;
+    BENEFITS &lt;span class="text-success"&gt;PARTNERS&lt;/span&gt;
+&lt;/h2&gt;
+&lt;p&gt;
+    &lt;span class="text-white font-weight-bold"&gt;1/ Support for ground search &lt;/span&gt;: Partners are supported in searching the premises if there is no beautiful site yet.
+    &lt;br /&gt;&lt;span class="text-white font-weight-bold"&gt;2/ Import genuine materials at preferential prices &lt;/span&gt;: directly import genuine materials at preferential prices.
+    &lt;br /&gt;&lt;span class="text-white font-weight-bold"&gt;3/ Full transfer of machinery and technology &lt;/span&gt;: Transferred the whole system of machines, equipment, systems thong, ...
+    &lt;br /&gt;&lt;span class="text-white font-weight-bold"&gt;4/ Store setup advice &lt;/span&gt;: Get advice on setup and decoration in A+ Coffee style.
+    &lt;br /&gt;&lt;span class="text-white font-weight-bold"&gt;5/ Personnel training, management &lt;/span&gt;: Training personnel from bartenders, cashiers, ... to store management, ... In addition, partners will be trained in operating procedures, how to manage shops, personnel, ...
+    &lt;br /&gt;&lt;span class="text-white font-weight-bold"&gt;6/ License issuance &lt;/span&gt;: Supported by all matters related to Legal, Food hygiene and safety, ...
+    &lt;br /&gt;&lt;span class="text-white font-weight-bold"&gt;7/ Marketing support &lt;/span&gt;: Enjoy the brand's general marketing programs, advice on PR, Marketing, and planning Own development of the store.
+&lt;/p&gt;</value>
+  </data>
+  <data name="section_franchise_procedure" xml:space="preserve">
+    <value>&lt;h2&gt; 7 Steps to owning &lt;span class="color-gold"&gt;A+ Coffee&lt;/span&gt; Franchise cafe. &lt;/h2&gt;
+&lt;p&gt;
+&lt;span class="text-info"&gt; Step 1 (Contact) &lt;/span&gt;: Partner contacting with A+ Coffee (via phone, internet, ...)
+&lt;br/&gt; &lt;span class="text-info"&gt; Step 2 (Provide information) &lt;/span&gt;: A+ Coffee provides franchise information for partners who wish to start a business.
+&lt;br/&gt; &lt;span class="text-info"&gt; Step 3 (Consultation meeting) &lt;/span&gt;: Meet face-to-face with partners, partners to A+ Coffee headquarters, listen to specific advice and answer questions.
+&lt;br/&gt; &lt;span class="text-info"&gt; Step 4 (Survey) &lt;/span&gt;: A+ Coffee surveys the location, checks the quality of partners to see if they are eligible to cooperate or not.
+&lt;br/&gt; &lt;span class="text-info"&gt; Step 5 (Sign a contract) &lt;/span&gt;: Sign a franchise agreement, partners pay franchise fees.
+&lt;br/&gt; &lt;span class="text-info"&gt; Step 6 (Franchise Setup) &lt;/span&gt;: A+ Coffee conducts store design, importing materials, machines, training personnel, ...
+&lt;br/&gt; &lt;span class="text-info"&gt; Step 7 (Operating operation) &lt;/span&gt;: After 2-4 weeks the store is operational.
+&lt;/p&gt;</value>
+  </data>
+  <data name="section_intro" xml:space="preserve">
+    <value>&lt;div class="heading-section ftco-animate"&gt;
+    &lt;span class="subheading"&gt;Franchise&lt;/span&gt;
+    &lt;h2 class="mb-4"&gt;
+        Why choose A + Coffee franchise?
+    &lt;/h2&gt;
+&lt;/div&gt;
+&lt;div&gt;
+    &lt;p&gt;
+        &lt;span class="text-white font-weight-bold"&gt;1/ Low cost &lt;/span&gt;: Low investment and franchise costs, 40-50% lower than the market.
+        &lt;br /&gt;&lt;span class="text-white font-weight-bold"&gt;2/ Fast and stable payback &lt;/span&gt;: Rapid payback period, proven on more than 30 sites and with Newspaper financial statements.
+        &lt;br /&gt;&lt;span class="text-white font-weight-bold"&gt;3/ High quality &amp; diverse products &lt;/span&gt;: The ingredients are always carefully selected. In addition, the company department always researches and develops new products, catching up with the trend of the times.
+        &lt;br /&gt;&lt;span class="text-white font-weight-bold"&gt;4/ Separate concept &lt;/span&gt;: The space in A + Coffee shops always creates a distinctive feature, inspired by the breaking Unique way in the traditional features of Vietnam.
+        &lt;br /&gt;&lt;span class="text-white font-weight-bold"&gt;5/ High competitiveness &lt;/span&gt;: Professional investment model, in addition to the Coffee chain, A + Coffee also owns a manufacturing factory. export, mixed training school, ...
+        &lt;br /&gt;&lt;span class="text-white font-weight-bold"&gt;6/ Strong &amp; sustainable brand &lt;/span&gt;: over 8 years of building and successfully developing the brand A + Coffee.
+        &lt;br /&gt;&lt;span class="text-white font-weight-bold"&gt;7/ Support and companion &lt;/span&gt;: A + Coffee commits to accompany partners in every activity: Shop setup, training, opening, operating, implementing marketing strategies, ...
+    &lt;/p&gt;
+    &lt;p class="mt-3"&gt;
+        &lt;a href="/lien-he" class="btn btn-primary p-1 px-xl-2 py-xl-2"&gt; CONSULTING 24/7 &lt;/a&gt;
+        &lt;a href="#" class="btn btn-white btn-outline-white p-1 px-xl-2 py-xl-2"&gt; POLICY &lt;/a&gt;
+    &lt;/p&gt;
+&lt;/div&gt;</value>
+  </data>
+  <data name="slider_content" xml:space="preserve">
+    <value>&lt;h1 class="mb-3 mt-5 bread"&gt;FRANCHISE&lt;/h1&gt;
+                    &lt;p class="breadcrumbs"&gt;
+                        &lt;span class="mr-2"&gt;&lt;a class="color-gold" href="/"&gt;HOME&lt;/a&gt;&lt;/span&gt;
+                        &lt;span&gt;FRANCHISE&lt;/span&gt;
+                    &lt;/p&gt;
+                    &lt;p class="lead mb-0 mt-5"&gt;
+                        Franchise business (often called franchise) is a system of expanding the network of products and services (for franchisees). An opportunity to grow your business under a well-known brand name (for franchisees).
+                    &lt;/p&gt;
+                    &lt;p class="mt-3"&gt;
+                        &lt;a href="/lien-he" class="btn btn-primary p-3 px-xl-4 py-xl-3"&gt;CONTACT US - 24H SUPPORT&lt;/a&gt;
+                    &lt;/p&gt;</value>
+  </data>
+</root>

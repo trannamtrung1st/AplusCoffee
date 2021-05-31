@@ -1,0 +1,48 @@
+﻿@page "/ket-qua-tim-kiem"
+@model FranCoffee.Website.Pages.SearchResultModel
+@{
+}
+
+@section custom_head {
+    <style>
+        .heading-section small {
+            text-transform: none;
+        }
+    </style>
+}
+
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section ftco-animate text-center">
+                <span class="subheading">Result</span>
+                @if (Model.Results.Count() > 0)
+                {
+                    <h2 class="mb-4 mt-2"><small><i>@Model.L["search_result"]:</i> @Model.Query</small></h2>
+                }
+                else
+                {
+                    <h2 class="mb-4 mt-2"><small><i>@Model.L["search_result_not_found"]:</i> @Model.Query</small></h2>
+                }
+            </div>
+        </div>
+
+        <div class="row">
+            @foreach (var r in Model.Results)
+            {
+                <div class="col-md-12">
+                    <div class="text py-4 d-block">
+                        <div class="text-info">@Html.Raw(r.Type)</div>
+                        <h3 class="heading mt-2">
+                            <a href="@Html.Raw(r.Path)">@Html.Raw(r.Title)</a>
+                        </h3>
+                        <p>
+                            @Html.Raw(r.Description)
+                        </p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

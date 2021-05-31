@@ -1,0 +1,286 @@
+﻿@page "/san-pham"
+@model FranCoffee.Website.Pages.MenuModel
+@{
+}
+
+@section custom_head{
+    <style>
+        .container {
+            max-width: 95% !important
+        }
+
+        .pricing-entry .text:after {
+            border: none !important;
+        }
+
+        .menu-wrap .menu-img {
+            height: unset !important;
+        }
+
+        .cate-header {
+            margin-bottom: 20px;
+        }
+
+        .products-container {
+            margin-left: 3%;
+        }
+
+        .categories {
+            border: 1px solid #c49b63;
+            padding: 0
+        }
+
+        .categories-container {
+            flex: 0 0 20% !important;
+        }
+
+        .categories-sticky {
+            position: sticky;
+            top: 100px;
+        }
+
+        .cate-header h2 {
+            border-left-width: 7px;
+            border-bottom-width: 2px;
+            border-top-width: 0px;
+            border-right-width: 0px;
+            border-style: solid;
+            border-color: white;
+            padding-left: 10px;
+            padding-right: 20px;
+        }
+
+        /*.cate-header span {
+                width: 200px;
+                border-top: 5px solid white;
+                position: absolute;
+                bottom: 5px;left:70px;
+            }*/
+    </style>
+}
+
+<section class="common-slider owl-carousel">
+
+    <div class="slider-item" style="background-image: url(/images/bg_1.jpg?v=31032020);" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row slider-text justify-content-center align-items-center">
+                <div class="slider-content pb-5 col-md-7 col-sm-12 text-center ftco-animate">
+                    <h1 class="mb-3 mt-5 bread">@Model.ProductType.Name</h1>
+                    <p class="breadcrumbs">
+                        <span class="mr-2"><a class="color-gold" href="/">@Model.L["home"]</a></span>
+                        <span>@Model.ProductType.Name</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-menu">
+    <div class="container">
+        <div class="row justify-content-center mb-1">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <span class="subheading">Discover</span>
+                <h2 class="mb-4 mt-2">LIST</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 ftco-animate p-md-5">
+                <div class="row d-md-none">
+                    <div class="col-md-12 nav-link-wrap mb-5">
+                        <div class="nav ftco-animate nav-pills justify-content-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            <a class="nav-link active" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-0" role="tab" aria-controls="v-pills-0" aria-selected="true">@Model.L["category_all"]</a>
+
+                            @foreach (var c in Model.Categories)
+                            {
+                                <a class="nav-link text-uppercase" id="v-pills-@c.Id-tab" data-toggle="pill" href="#v-pills-@c.Id" role="tab" aria-controls="v-pills-@c.Id" aria-selected="false">@c.Name</a>
+                            }
+                        </div>
+                    </div>
+                    <div class="col-md-12 align-items-center">
+
+                        <div class="tab-content ftco-animate" id="v-pills-tabContent">
+
+                            <div class="tab-pane fade show active" id="v-pills-0" role="tabpanel" aria-labelledby="v-pills-0-tab">
+                                <div class="row">
+
+                                    @foreach (var p in Model.Products)
+                                    {
+                                        <div class="col-md-4 text-center">
+                                            <div class="menu-wrap">
+                                                @{
+                                                    var ava = p.Images != null ? p.Images.FirstOrDefault(i => i.IsAvatar == true)?.RelPath : null;
+                                                    if (ava != null)
+                                                    {
+                                                        <a href="/san-pham/@p.Id" class="img-@p.Id menu-img img mb-4">
+                                                            <img src="@ava" class="img img-fluid w-100" />
+                                                        </a>
+                                                    }
+                                                }
+                                                <div class="text">
+                                                    <h3><span>@p.Name</span></h3>
+                                                    <p>@p.Description</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+
+                                </div>
+                            </div>
+
+                            @foreach (var c in Model.Categories)
+                            {
+                                <div class="tab-pane fade" id="v-pills-@c.Id" role="tabpanel" aria-labelledby="v-pills-@c.Id-tab">
+                                    <div class="row">
+                                        @foreach (var vm in Model.Products.Where(p => p.CategoryId == c.Id))
+                                        {
+                                            var ava = vm.Images != null ? vm.Images.FirstOrDefault(i => i.IsAvatar == true)?.RelPath : null;
+                                            <div class="col-md-4 text-center">
+                                                <div class="menu-wrap">
+                                                    @if (ava != null)
+                                                    {
+                                                        <a href="/san-pham/@vm.Id" class="img-@vm.Id menu-img img mb-4">
+                                                            <img src="@ava" class="img img-fluid w-100" />
+                                                        </a>
+                                                    }
+                                                    <div class="text">
+                                                        <h3><span>@vm.Name</span></h3>
+                                                        <p>@vm.Description</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        }
+
+                                    </div>
+                                </div>
+                            }
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-none d-md-flex">
+                    <div class="col-sm-5 col-md-3 categories-container">
+                        <div class="row categories-sticky">
+                            <div class="col-12 categories">
+                                @foreach (var c in Model.Categories)
+                                {
+                                    <button id="btn-cate-@c.Id" onclick="animateScrollTo('cate-@c.Id')"
+                                       class="btn w-100 btn-primary btn-outline-primary border-0 px-4 py-3 text-uppercase font-weight-bold">
+                                        @c.Name
+                                    </button>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-7 col-md-9 align-items-center products-container">
+                        <div class="tab-content ftco-animate">
+                            <div class="tab-pane show active">
+                                @for (var idx=0;idx< Model.Categories.Count;idx++)
+                                {
+                                    var c = Model.Categories[idx];
+                                    <div class="row" id="cate-@c.Id" no="@idx">
+                                        <div class="col-12 cate-header">
+                                            <h2 class="color-gold d-inline-block text-uppercase">
+                                                @c.Name
+                                                @*<span class="d-inline-block"></span>*@
+                                            </h2>
+                                        </div>
+                                        @foreach (var p in Model.Products.Where(p => p.CategoryId == c.Id))
+                                        {
+                                            <div class="col-sm-6 col-md-4 text-center">
+                                                <div class="menu-wrap">
+                                                    @{
+                                                        var ava = p.Images != null ? p.Images.FirstOrDefault(i => i.IsAvatar == true)?.RelPath : null;
+                                                        if (ava != null)
+                                                        {
+                                                            <a href="/san-pham/@p.Id" class="img-@p.Id menu-img img mb-4">
+                                                                <img src="@ava" class="img img-fluid w-100" />
+                                                            </a>
+                                                        }
+                                                    }
+                                                    <div class="text">
+                                                        <h3><span>@p.Name</span></h3>
+                                                        <p>@p.Description</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        }
+                                    </div>
+                                }
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section custom_script {
+    <script src="~/js/jquery.waypoints.min.js"></script>
+    <script>
+    pageInit();
+    function pageInit() {
+        var waypoints = $('[id^="cate-"]').waypoint(function (direction) {
+            if (direction == "down") {
+                var id = this.element.id;
+                var btn = $("[id^=btn-cate].active-cate");
+                btn.removeClass("active-cate text-white");
+                btn.addClass("btn-outline-primary");
+                btn = $("#btn-" + id);
+                btn.addClass("active-cate text-white");
+                btn.removeClass("btn-outline-primary");
+            } else {
+                var ele = $(this.element);
+                var no = parseInt(ele.attr("no"));
+                if (no > 0) {
+                    var btn = $("[id^=btn-cate].active-cate");
+                    btn.removeClass("active-cate text-white");
+                    btn.addClass("btn-outline-primary");
+                    var current = $('[id^="cate-"][no=' + (no - 1) + ']');
+                    var id = current.attr("id");
+                    btn = $("#btn-" + id);
+                    btn.addClass("active-cate text-white");
+                    btn.removeClass("btn-outline-primary");
+                }
+            }
+        },
+            {
+                context: window,
+                offset: 300
+            }
+        );
+
+        @*@{
+            var images = Model.Products.Select(p => new
+            {
+                id = p.Id,
+                images = p.Images.Select(im => new
+                {
+                    src = im.RelPath
+                }).ToList()
+            }).ToList();
+        }
+
+        var images = @Html.Raw(Json.Serialize(images));
+        console.log(images);
+        for (var i = 0; i < images.length; i++) {
+            var item = images[i];
+            $('.img-' + item.id).magnificPopup({
+                items: item.images,
+                gallery: {
+                    enabled: true
+                },
+                type: 'image' // this is default type
+            });
+        }*@
+    }
+
+    function animateScrollTo(id) {
+        $("html, body").animate({ scrollTop: $('#'+id).offset().top - 100 }, 300, "swing");
+    }
+
+    </script>
+}

@@ -1,0 +1,85 @@
+﻿@page "/lien-he"
+@model FranCoffee.Website.Pages.ContactUsModel
+@{
+}
+
+@section custom_head {
+    <style>
+        .contact-section .container {
+            background: rgba(0,0,0,0.3) !important;
+            border-radius: 17px;
+        }
+    </style>
+}
+
+<section class="common-slider owl-carousel">
+
+    <div class="slider-item" style="background-image: url(/images/bg_2.jpg?v=31032020);" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row slider-text justify-content-center align-items-center">
+                <div class="col-12 slider-content pb-5 justify-content-center align-items-center d-flex">
+                    <div class="col-md-7 col-sm-12 text-center ftco-animate">
+                        @Model.L["slider_content"]
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section contact-section">
+    <div class="container mt-5 p-5">
+        <div class="row block-9">
+            <div class="col-md-4 contact-info ftco-animate">
+                <div class="row">
+                    @Model.L["section_contact_info"]
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-6 ftco-animate">
+                @{
+                    var formDetails = Model.L["contact_form_details"].Value.Split('_');
+                }
+                <form asp-page="mail" asp-page-handler="contact" class="contact-form" method="post">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <!--Full name-->
+                                <input type="text" name="full_name" class="form-control" placeholder="@formDetails[0]">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <!--Email-->
+                                <input type="text" name="email" class="form-control" placeholder="@formDetails[1]">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <!--Phone-->
+                                <input type="text" name="phone" class="form-control" placeholder="@formDetails[2]">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <!--Subject-->
+                        <input type="text" name="subject" class="form-control" placeholder="@formDetails[3]">
+                    </div>
+                    <div class="form-group">
+                        <!--Message-->
+                        <textarea name="message" id="" cols="30" rows="7" class="form-control" placeholder="@formDetails[4]"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <!--Send-->
+                        <input type="submit" value="@formDetails[5]" class="btn btn-primary py-3 px-5">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+@*<div id="map"></div>*@

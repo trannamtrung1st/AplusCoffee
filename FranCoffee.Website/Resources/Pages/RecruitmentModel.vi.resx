@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="office_job_header" xml:space="preserve">
+    <value>&lt;span class="subheading"&gt;Office&lt;/span&gt;
+                    &lt;h2 class="mb-4 mt-3"&gt;
+                        Khối văn phòng &amp;nbsp;
+                        &lt;small&gt;hoặc &lt;a href="#"&gt;Tuyển dụng quán&lt;/a&gt;&lt;/small&gt;
+                    &lt;/h2&gt;</value>
+  </data>
+  <data name="section_intro" xml:space="preserve">
+    <value>&lt;span class="subheading"&gt;Brilliant&lt;/span&gt;
+                    &lt;h2 class="mb-4"&gt;Không chỉ là nhân viên&lt;br/&gt; mà còn là cộng sự&lt;/h2&gt;
+                    &lt;p class="mb-4 text-justify"&gt;
+                        &lt;span class="color-gold"&gt;A+ coffee&lt;/span&gt; đang tìm kiếm những ứng viên có niềm đam mê lớn trong ngành kinh doanh luôn tìm hiểu và đáp ứng nhu cầu khách hàng, yêu thích làm việc nhóm, không quản ra về muộn và đi làm sớm; những bạn trẻ hiểu được rằng sự cố gắng sẽ được tưởng thưởng xứng đáng không chỉ bằng thu nhập tốt mà còn bằng cơ hội phát triển nghề nghiệp một cách chuyên nghiệp; những ứng viên có tình yêu lớn đối với cà phê và lịch sử của nó, quan trọng hơn nữa là có tinh thần học hỏi cao và một tâm hồn rộng mở.&lt;br/&gt;&lt;br/&gt;
+Hãy đến với chúng tôi, &lt;span class="color-gold"&gt;A+ coffee&lt;/span&gt; sẽ cùng bạn đi trên con đường phát triển một sự nghiệp bền vững và cho bạn thấy cách chúng tôi giao hòa giữa Trách Nhiệm Cộng Đồng, Sự Cam Kết, và Lòng Nhiệt Thành trong một Công ty tuyệt vời như &lt;span class="color-gold"&gt;A+ Coffee&lt;/span&gt;.&lt;br/&gt;&lt;br/&gt;
+&lt;span class="color-gold"&gt;A+ Coffee&lt;/span&gt; hân hạnh mang đến những cơ hội việc làm cho các sinh viên vừa và sẽ tốt nghiệp với tư cách thực tập sinh của Công ty. Sau quá trình thực tập kéo dài từ 2-3 tháng, các ứng viên có kết quả làm việc tốt và ổn định sẽ có cơ hội làm việc lâu dài với Công ty.&lt;br/&gt;&lt;br/&gt;
+Chúng tôi cũng cung cấp cơ hội việc làm cho các sinh viên hay ứng viên muốn làm việc bán thời gian, tùy thuộc vào nhu cầu thực tế của Công ty và của từng cửa hàng. Các đối tác (Nhân viên) bán thời gian có thể chuyển lên làm việc toàn thời gian sau ba tháng làm việc.
+
+                    &lt;/p&gt;</value>
+  </data>
+  <data name="slider_content" xml:space="preserve">
+    <value>&lt;h1 class="mb-3 mt-5 bread"&gt;CƠ HỘI NGHỀ NGHIỆP&lt;/h1&gt;
+                    &lt;p class="breadcrumbs"&gt;
+                        &lt;span class="mr-2"&gt;&lt;a class="color-gold" href="/"&gt;TRANG CHỦ&lt;/a&gt;&lt;/span&gt;
+                        &lt;span&gt;CƠ HỘI NGHỀ NGHIỆP&lt;/span&gt;
+                    &lt;/p&gt;</value>
+  </data>
+</root>
